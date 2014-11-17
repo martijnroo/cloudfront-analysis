@@ -1,0 +1,24 @@
+[Measurement for 10mb at 13:39:24 16.39.2014] 
+Ping request could not find host d2j3h070v7ssnq.cloudfront.net. Please check the name and try again.
+
+Tshark:
+
+  1   0.000000  192.168.1.2 -> 72.21.215.152 SSL 55 Continuation Data
+  2   0.136068 72.21.215.152 -> 192.168.1.2  TCP 54 443→61633 [ACK] Seq=1 Ack=2 Win=32768 Len=0
+  3   0.341357  192.168.1.2 -> 72.21.215.152 SSL 55 Continuation Data
+  4   0.473816 72.21.215.152 -> 192.168.1.2  TCP 54 443→61635 [ACK] Seq=1 Ack=2 Win=32768 Len=0
+  5   0.617326 64.233.164.189 -> 192.168.1.2  TLSv1.2 105 Application Data
+  6   0.647525  192.168.1.2 -> 64.233.164.189 TCP 54 61167→443 [ACK] Seq=1 Ack=52 Win=255 Len=0
+  7   0.661653 54.231.96.232 -> 192.168.1.2  TCP 54 443→61694 [FIN, ACK] Seq=1 Ack=1 Win=280 Len=0
+  8   0.661723  192.168.1.2 -> 54.231.96.232 TCP 54 61694→443 [ACK] Seq=1 Ack=2 Win=257 Len=0
+  9   1.402221  192.168.1.2 -> 23.60.69.143 SSL 55 Continuation Data
+ 10   1.450334 23.60.69.143 -> 192.168.1.2  TCP 66 443→61680 [ACK] Seq=1 Ack=2 Win=557 Len=0 SLE=1 SRE=2
+ 11   1.672487  192.168.1.2 -> 23.3.90.200  SSL 55 Continuation Data
+ 12   1.711353  23.3.90.200 -> 192.168.1.2  TCP 66 443→61681 [ACK] Seq=1 Ack=2 Win=557 Len=0 SLE=1 SRE=2
+ 13   1.884724  192.168.1.2 -> 82.96.58.9   TCP 54 61623→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 14   1.885189  192.168.1.2 -> 54.231.96.232 TCP 54 61694→443 [FIN, ACK] Seq=1 Ack=2 Win=257 Len=0
+ 15   1.932625   82.96.58.9 -> 192.168.1.2  TCP 54 443→61623 [ACK] Seq=1 Ack=2 Win=887 Len=0
+ 16   2.028549 54.231.96.232 -> 192.168.1.2  TCP 54 443→61694 [ACK] Seq=2 Ack=2 Win=280 Len=0
+ 17   4.379889  192.168.1.2 -> 193.184.164.190 SSL 55 Continuation Data
+ 18   4.431306 193.184.164.190 -> 192.168.1.2  TCP 66 443→61683 [ACK] Seq=1 Ack=2 Win=524 Len=0 SLE=1 SRE=2
+ 19   5.167009 fe80::446a:b521:8794:ef65 -> fe80::5ef9:6aff:fe25:83d4 DNS 109 Standard query 0xc39e  A d1mwrzpabofbyf.cloudfront.net

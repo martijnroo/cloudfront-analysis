@@ -1,0 +1,48 @@
+[Measurement for 1kb at 13:43:07 16.43.2014] 
+
+Pinging d2btk8vfxgin4t.cloudfront.net [54.230.99.36] with 32 bytes of data:
+Reply from 54.230.99.36: bytes=32 time=27ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=52ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=51ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=48ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=30ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=44ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=103ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=40ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=148ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=277ms TTL=57
+
+Ping statistics for 54.230.99.36:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 27ms, Maximum = 277ms, Average = 82ms
+
+Tshark:
+
+  1   0.000000  192.168.1.2 -> 54.230.99.36 TCP 66 61739→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+  2   0.055485 54.230.99.36 -> 192.168.1.2  TCP 66 80→61739 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1400 SACK_PERM=1 WS=128
+  3   0.055637  192.168.1.2 -> 54.230.99.36 TCP 54 61739→80 [ACK] Seq=1 Ack=1 Win=65792 Len=0
+  4   0.055863  192.168.1.2 -> 54.230.99.36 HTTP 150 GET /1kb HTTP/1.1 
+  5   0.088772 54.230.99.36 -> 192.168.1.2  TCP 54 80→61739 [ACK] Seq=1 Ack=97 Win=14720 Len=0
+  6   0.152836 54.230.99.36 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+  7   0.154535 54.230.99.36 -> 192.168.1.2  HTTP 121 HTTP/1.1 200 OK  (application/octet-stream)
+  8   0.154645  192.168.1.2 -> 54.230.99.36 TCP 54 61739→80 [ACK] Seq=97 Ack=1468 Win=65792 Len=0
+  9   0.157356  192.168.1.2 -> 54.230.99.36 TCP 54 61739→80 [FIN, ACK] Seq=97 Ack=1468 Win=65792 Len=0
+ 10   0.184050 54.230.99.36 -> 192.168.1.2  TCP 54 80→61739 [FIN, ACK] Seq=1468 Ack=98 Win=14720 Len=0
+ 11   0.184176  192.168.1.2 -> 54.230.99.36 TCP 54 61739→80 [ACK] Seq=98 Ack=1469 Win=65792 Len=0
+ 12   1.302757  192.168.1.2 -> 31.13.64.97  SSL 55 Continuation Data
+ 13   1.375559  31.13.64.97 -> 192.168.1.2  TCP 54 443→61553 [ACK] Seq=1 Ack=2 Win=2043 Len=0
+ 14   1.571012  192.168.1.2 -> 72.21.215.152 SSL 55 Continuation Data
+ 15   1.700239 HuaweiTe_25:83:d4 -> IntelCor_3f:fc:98 ARP 42 Who has 192.168.1.2?  Tell 192.168.1.1
+ 16   1.700284 IntelCor_3f:fc:98 -> HuaweiTe_25:83:d4 ARP 42 192.168.1.2 is at 00:24:d7:3f:fc:98
+ 17   1.711068 72.21.215.152 -> 192.168.1.2  TCP 54 443→61634 [ACK] Seq=1 Ack=2 Win=32768 Len=0
+ 18   2.770008 192.241.187.124 -> 192.168.1.2  TLSv1.2 85 Application Data
+ 19   2.770275  192.168.1.2 -> 192.241.187.124 TLSv1.2 89 Application Data
+ 20   2.904502 192.241.187.124 -> 192.168.1.2  TCP 54 443→58317 [ACK] Seq=32 Ack=36 Win=16 Len=0
+ 21   4.300879  192.168.1.2 -> 54.230.99.36 ICMP 74 Echo (ping) request  id=0x0001, seq=225/57600, ttl=128
+ 22   4.347737 54.230.99.36 -> 192.168.1.2  ICMP 74 Echo (ping) reply    id=0x0001, seq=225/57600, ttl=57 (request in 21)
+ 23   4.453690  192.168.1.2 -> 72.21.215.152 SSL 55 Continuation Data
+ 24   4.503687  192.168.1.2 -> 64.233.164.84 SSL 55 Continuation Data
+ 25   4.544985 64.233.164.84 -> 192.168.1.2  TCP 66 443→61711 [ACK] Seq=1 Ack=2 Win=361 Len=0 SLE=1 SRE=2
+ 26   4.586383 72.21.215.152 -> 192.168.1.2  TCP 54 443→61636 [ACK] Seq=1 Ack=2 Win=32768 Len=0
+ 27   4.627795  192.168.1.2 -> 64.233.164.95 SSL 55 Continuation Data

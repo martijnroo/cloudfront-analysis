@@ -1,0 +1,17 @@
+
+Pinging d1hrt2aivb7twc.cloudfront.net [54.230.98.53] with 32 bytes of data:
+Reply from 54.230.98.53: bytes=32 time=29ms TTL=57
+Reply from 54.230.98.53: bytes=32 time=47ms TTL=57
+Reply from 54.230.98.53: bytes=32 time=46ms TTL=57
+Reply from 54.230.98.53: bytes=32 time=63ms TTL=57
+Reply from 54.230.98.53: bytes=32 time=42ms TTL=57
+Reply from 54.230.98.53: bytes=32 time=40ms TTL=57
+Reply from 54.230.98.53: bytes=32 time=58ms TTL=57
+Reply from 54.230.98.53: bytes=32 time=304ms TTL=57
+Request timed out.
+Reply from 54.230.98.53: bytes=32 time=41ms TTL=57
+
+Ping statistics for 54.230.98.53:
+    Packets: Sent = 10, Received = 9, Lost = 1 (10% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 29ms, Maximum = 304ms, Average = 74ms

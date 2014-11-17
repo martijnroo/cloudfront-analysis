@@ -1,0 +1,41 @@
+[Measurement for 10kb at 13:50:47 16.50.2014] 
+
+Pinging dxuf2hxmfmw7z.cloudfront.net [54.230.98.183] with 32 bytes of data:
+Reply from 54.230.98.183: bytes=32 time=47ms TTL=57
+Reply from 54.230.98.183: bytes=32 time=34ms TTL=57
+Reply from 54.230.98.183: bytes=32 time=43ms TTL=57
+Reply from 54.230.98.183: bytes=32 time=26ms TTL=57
+Reply from 54.230.98.183: bytes=32 time=28ms TTL=57
+Reply from 54.230.98.183: bytes=32 time=58ms TTL=57
+Reply from 54.230.98.183: bytes=32 time=43ms TTL=57
+Reply from 54.230.98.183: bytes=32 time=28ms TTL=57
+Reply from 54.230.98.183: bytes=32 time=62ms TTL=57
+Reply from 54.230.98.183: bytes=32 time=31ms TTL=57
+
+Ping statistics for 54.230.98.183:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 26ms, Maximum = 62ms, Average = 40ms
+
+Tshark:
+
+  1   0.000000  192.168.1.2 -> 54.230.98.183 TCP 66 61820→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+  2   0.045081 54.230.98.183 -> 192.168.1.2  TCP 66 80→61820 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1400 SACK_PERM=1 WS=128
+  3   0.045249  192.168.1.2 -> 54.230.98.183 TCP 54 61820→80 [ACK] Seq=1 Ack=1 Win=65792 Len=0
+  4   0.045412  192.168.1.2 -> 54.230.98.183 HTTP 150 GET /10kb HTTP/1.1 
+  5   0.077851 54.230.98.183 -> 192.168.1.2  TCP 54 80→61820 [ACK] Seq=1 Ack=97 Win=14720 Len=0
+  6   0.836396 54.230.98.183 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+  7   0.840822 54.230.98.183 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+  8   0.840824 54.230.98.183 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+  9   0.840825 54.230.98.183 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 10   0.840829 54.230.98.183 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 11   0.840830 54.230.98.183 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 12   0.840831 54.230.98.183 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 13   0.840832 54.230.98.183 -> 192.168.1.2  HTTP 938 HTTP/1.1 200 OK  (application/octet-stream)
+ 14   0.841087  192.168.1.2 -> 54.230.98.183 TCP 54 61820→80 [ACK] Seq=97 Ack=10685 Win=65792 Len=0
+ 15   0.857008  192.168.1.2 -> 54.230.98.183 TCP 54 61820→80 [FIN, ACK] Seq=97 Ack=10685 Win=65792 Len=0
+ 16   0.888254 54.230.98.183 -> 192.168.1.2  TCP 54 80→61820 [FIN, ACK] Seq=10685 Ack=98 Win=14720 Len=0
+ 17   0.888391  192.168.1.2 -> 54.230.98.183 TCP 54 61820→80 [ACK] Seq=98 Ack=10686 Win=65792 Len=0
+ 18   1.047635  192.168.1.2 -> 64.233.164.125 TCP 76 [TCP segment of a reassembled PDU]
+ 19   1.081814 64.233.164.125 -> 192.168.1.2  TCP 54 5222→58187 [ACK] Seq=1 Ack=23 Win=1009 Len=0
+ 20   3.013109 207.46.101.29 -> 192.168.1.2  TCP 54 80→61814 [RST, ACK] Seq=1 Ack=1 Win=0 Len=0

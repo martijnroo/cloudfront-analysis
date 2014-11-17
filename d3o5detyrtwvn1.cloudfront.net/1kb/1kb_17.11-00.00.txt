@@ -1,0 +1,6 @@
+[Measurement for 1kb at 00:03:51 17.03.2014] 
+Tshark:
+
+  1   0.000000  192.168.1.2 -> 64.233.164.125 TCP 76 [TCP segment of a reassembled PDU]
+  2   0.175643 64.233.164.125 -> 192.168.1.2  TCP 54 5222→49524 [ACK] Seq=1 Ack=23 Win=508 Len=0
+  3   0.468125  192.168.1.2 -> 54.230.99.158 TCP 66 49594→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1

@@ -1,0 +1,17 @@
+
+Pinging dxuf2hxmfmw7z.cloudfront.net [54.230.99.217] with 32 bytes of data:
+Reply from 54.230.99.217: bytes=32 time=29ms TTL=57
+Reply from 54.230.99.217: bytes=32 time=51ms TTL=57
+Reply from 54.230.99.217: bytes=32 time=50ms TTL=57
+Reply from 54.230.99.217: bytes=32 time=46ms TTL=57
+Reply from 54.230.99.217: bytes=32 time=45ms TTL=57
+Reply from 54.230.99.217: bytes=32 time=29ms TTL=57
+Reply from 54.230.99.217: bytes=32 time=55ms TTL=57
+Reply from 54.230.99.217: bytes=32 time=57ms TTL=57
+Reply from 54.230.99.217: bytes=32 time=51ms TTL=57
+Reply from 54.230.99.217: bytes=32 time=49ms TTL=57
+
+Ping statistics for 54.230.99.217:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 29ms, Maximum = 57ms, Average = 46ms

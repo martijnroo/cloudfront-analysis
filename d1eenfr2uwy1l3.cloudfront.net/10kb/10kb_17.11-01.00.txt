@@ -1,0 +1,26 @@
+[Measurement for 10kb at 01:04:37 17.04.2014] 
+Tshark:
+
+  1   0.000000 fe80::446a:b521:8794:ef65 -> fe80::5ef9:6aff:fe25:83d4 DNS 97 Standard query 0xe4fe  A isatap.elisa.home
+  2   0.468135  192.168.1.2 -> 54.230.97.235 TCP 66 49701→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+  3   0.514452 54.230.97.235 -> 192.168.1.2  TCP 66 80→49701 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1400 SACK_PERM=1 WS=128
+  4   0.514565  192.168.1.2 -> 54.230.97.235 TCP 54 49701→80 [ACK] Seq=1 Ack=1 Win=16384 Len=0
+  5   0.514845  192.168.1.2 -> 54.230.97.235 HTTP 151 GET /10kb HTTP/1.1 
+  6   0.542810 54.230.97.235 -> 192.168.1.2  TCP 54 80→49701 [ACK] Seq=1 Ack=98 Win=14720 Len=0
+  7   0.544734 54.230.97.235 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+  8   0.546971 54.230.97.235 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+  9   0.547091  192.168.1.2 -> 54.230.97.235 TCP 54 49701→80 [ACK] Seq=98 Ack=2801 Win=16384 Len=0
+ 10   0.547245 54.230.97.235 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 11   0.547533 54.230.97.235 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 12   0.547592  192.168.1.2 -> 54.230.97.235 TCP 54 49701→80 [ACK] Seq=98 Ack=5601 Win=16384 Len=0
+ 13   0.548923 54.230.97.235 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 14   0.549002 54.230.97.235 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 15   0.549049  192.168.1.2 -> 54.230.97.235 TCP 54 49701→80 [ACK] Seq=98 Ack=8401 Win=16384 Len=0
+ 16   0.549595 54.230.97.235 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 17   0.549661 54.230.97.235 -> 192.168.1.2  HTTP 949 HTTP/1.1 200 OK  (application/octet-stream)
+ 18   0.549710  192.168.1.2 -> 54.230.97.235 TCP 54 49701→80 [ACK] Seq=98 Ack=10696 Win=16384 Len=0
+ 19   0.549808  192.168.1.2 -> 54.230.97.235 TCP 54 49701→80 [FIN, ACK] Seq=98 Ack=10696 Win=16384 Len=0
+ 20   0.584773 54.230.97.235 -> 192.168.1.2  TCP 54 80→49701 [FIN, ACK] Seq=10696 Ack=99 Win=14720 Len=0
+ 21   0.584902  192.168.1.2 -> 54.230.97.235 TCP 54 49701→80 [ACK] Seq=99 Ack=10697 Win=16384 Len=0
+ 22   2.000237 fe80::446a:b521:8794:ef65 -> fe80::5ef9:6aff:fe25:83d4 DNS 97 Standard query 0xe4fe  A isatap.elisa.home
+ 23   2.000498  192.168.1.2 -> 192.168.1.1  DNS 77 Standard query 0xe4fe  A isatap.elisa.home

@@ -1,0 +1,65 @@
+[Measurement for 10kb at 13:45:12 16.45.2014] 
+
+Pinging d34jimtkchmonz.cloudfront.net [54.230.99.36] with 32 bytes of data:
+Reply from 54.230.99.36: bytes=32 time=54ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=26ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=51ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=26ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=27ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=28ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=26ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=34ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=28ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=27ms TTL=57
+
+Ping statistics for 54.230.99.36:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 26ms, Maximum = 54ms, Average = 32ms
+
+Tshark:
+
+  1   0.000000  192.168.1.2 -> 31.13.64.97  SSL 55 Continuation Data
+  2   0.055598  31.13.64.97 -> 192.168.1.2  TCP 54 443→61553 [ACK] Seq=1 Ack=2 Win=2043 Len=0
+  3   0.436393  192.168.1.2 -> 31.13.89.117 SSL 55 Continuation Data
+  4   0.491723 31.13.89.117 -> 192.168.1.2  TCP 54 443→61769 [ACK] Seq=1 Ack=2 Win=80 Len=0
+  5   0.556513  192.168.1.2 -> 74.125.232.206 SSL 55 Continuation Data
+  6   0.583203 74.125.232.206 -> 192.168.1.2  TCP 66 443→61686 [ACK] Seq=1 Ack=2 Win=1373 Len=0 SLE=1 SRE=2
+  7   0.627603 69.171.248.18 -> 192.168.1.2  TLSv1.2 739 Application Data
+  8   0.648321  192.168.1.2 -> 69.171.248.18 TLSv1.2 711 Application Data
+  9   0.817676 69.171.248.18 -> 192.168.1.2  TCP 54 443→61652 [ACK] Seq=686 Ack=658 Win=1012 Len=0
+ 10   1.033996  192.168.1.2 -> 54.230.99.36 TCP 66 61773→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+ 11   1.062585 54.230.99.36 -> 192.168.1.2  TCP 66 80→61773 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1400 SACK_PERM=1 WS=128
+ 12   1.062762  192.168.1.2 -> 54.230.99.36 TCP 54 61773→80 [ACK] Seq=1 Ack=1 Win=65792 Len=0
+ 13   1.073012  192.168.1.2 -> 54.230.99.36 HTTP 151 GET /10kb HTTP/1.1 
+ 14   1.103150 54.230.99.36 -> 192.168.1.2  TCP 54 80→61773 [ACK] Seq=1 Ack=98 Win=14720 Len=0
+ 15   1.197249 54.230.99.36 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 16   1.201125 54.230.99.36 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 17   1.201127 54.230.99.36 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 18   1.201128 54.230.99.36 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 19   1.201131 54.230.99.36 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 20   1.201133 54.230.99.36 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 21   1.201134 54.230.99.36 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 22   1.201136 54.230.99.36 -> 192.168.1.2  HTTP 938 HTTP/1.1 200 OK  (application/octet-stream)
+ 23   1.201429  192.168.1.2 -> 54.230.99.36 TCP 54 61773→80 [ACK] Seq=98 Ack=10685 Win=65792 Len=0
+ 24   1.219998  192.168.1.2 -> 54.230.99.36 TCP 54 61773→80 [FIN, ACK] Seq=98 Ack=10685 Win=65792 Len=0
+ 25   1.248791 54.230.99.36 -> 192.168.1.2  TCP 54 80→61773 [FIN, ACK] Seq=10685 Ack=99 Win=14720 Len=0
+ 26   1.248932  192.168.1.2 -> 54.230.99.36 TCP 54 61773→80 [ACK] Seq=99 Ack=10686 Win=65792 Len=0
+ 27   2.040823  192.168.1.2 -> 72.21.215.152 SSL 55 Continuation Data
+ 28   2.168672 72.21.215.152 -> 192.168.1.2  TCP 54 443→61636 [ACK] Seq=1 Ack=2 Win=32768 Len=0
+ 29   3.846991  192.168.1.2 -> 54.225.165.45 TLSv1.2 90 Application Data
+ 30   3.977813 54.225.165.45 -> 192.168.1.2  TLSv1.2 86 Application Data
+ 31   3.981718  192.168.1.2 -> 54.243.222.44 TCP 54 61759→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 32   3.982343  192.168.1.2 -> 54.243.222.44 TCP 54 61758→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 33   3.982745  192.168.1.2 -> 54.243.222.44 TCP 54 61762→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 34   3.983084  192.168.1.2 -> 54.243.222.44 TCP 54 61760→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 35   3.983446  192.168.1.2 -> 54.243.222.44 TCP 54 61757→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 36   3.984042  192.168.1.2 -> 54.243.222.44 TCP 54 61761→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 37   4.027621  192.168.1.2 -> 54.225.165.45 TCP 54 58179→443 [ACK] Seq=37 Ack=33 Win=256 Len=0
+ 38   4.114173 54.243.222.44 -> 192.168.1.2  TCP 54 443→61762 [ACK] Seq=1 Ack=2 Win=115 Len=0
+ 39   4.116079 54.243.222.44 -> 192.168.1.2  TCP 54 443→61757 [ACK] Seq=1 Ack=2 Win=78 Len=0
+ 40   4.116764 54.243.222.44 -> 192.168.1.2  TCP 54 443→61760 [ACK] Seq=1 Ack=2 Win=92 Len=0
+ 41   4.117684 54.243.222.44 -> 192.168.1.2  TCP 54 443→61759 [ACK] Seq=1 Ack=2 Win=95 Len=0
+ 42   4.120312 54.243.222.44 -> 192.168.1.2  TCP 54 443→61761 [ACK] Seq=1 Ack=2 Win=75 Len=0
+ 43   4.124648 54.243.222.44 -> 192.168.1.2  TCP 54 443→61758 [ACK] Seq=1 Ack=2 Win=81 Len=0
+ 44   5.406607  192.168.1.2 -> 54.230.99.36 ICMP 74 Echo (ping) request  id=0x0001, seq=285/7425, ttl=128

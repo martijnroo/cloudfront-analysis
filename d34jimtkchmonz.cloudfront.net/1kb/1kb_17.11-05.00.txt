@@ -1,0 +1,18 @@
+[Measurement for 1kb at 05:03:17 17.03.2014] 
+Tshark:
+
+  1   0.000000  192.168.1.2 -> 54.230.99.196 TCP 66 50094→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+  2   0.049676 54.230.99.196 -> 192.168.1.2  TCP 66 80→50094 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1400 SACK_PERM=1 WS=128
+  3   0.049793  192.168.1.2 -> 54.230.99.196 TCP 54 50094→80 [ACK] Seq=1 Ack=1 Win=65792 Len=0
+  4   0.050080  192.168.1.2 -> 54.230.99.196 HTTP 150 GET /1kb HTTP/1.1 
+  5   0.076739 54.230.99.196 -> 192.168.1.2  TCP 54 80→50094 [ACK] Seq=1 Ack=97 Win=14720 Len=0
+  6   0.078866 54.230.99.196 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+  7   0.079719 54.230.99.196 -> 192.168.1.2  HTTP 132 HTTP/1.1 200 OK  (application/octet-stream)
+  8   0.079805  192.168.1.2 -> 54.230.99.196 TCP 54 50094→80 [ACK] Seq=97 Ack=1479 Win=65792 Len=0
+  9   0.079931  192.168.1.2 -> 54.230.99.196 TCP 54 50094→80 [FIN, ACK] Seq=97 Ack=1479 Win=65792 Len=0
+ 10   0.107893 54.230.99.196 -> 192.168.1.2  TCP 54 80→50094 [FIN, ACK] Seq=1479 Ack=98 Win=14720 Len=0
+ 11   0.108026  192.168.1.2 -> 54.230.99.196 TCP 54 50094→80 [ACK] Seq=98 Ack=1480 Win=65792 Len=0
+ 12   0.827180 HuaweiTe_25:83:d4 -> IntelCor_3f:fc:98 ARP 42 Who has 192.168.1.2?  Tell 192.168.1.1
+ 13   0.827220 IntelCor_3f:fc:98 -> HuaweiTe_25:83:d4 ARP 42 192.168.1.2 is at 00:24:d7:3f:fc:98
+ 14   1.018984 fe80::5ef9:6aff:fe25:83d4 -> fe80::446a:b521:8794:ef65 ICMPv6 86 Neighbor Solicitation for fe80::446a:b521:8794:ef65 from 5c:f9:6a:25:83:d4
+ 15   1.019061 fe80::446a:b521:8794:ef65 -> fe80::5ef9:6aff:fe25:83d4 ICMPv6 86 Neighbor Advertisement fe80::446a:b521:8794:ef65 (sol, ovr) is at 00:24:d7:3f:fc:98

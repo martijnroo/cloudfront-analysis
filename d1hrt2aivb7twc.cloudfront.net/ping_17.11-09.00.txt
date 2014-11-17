@@ -1,0 +1,17 @@
+
+Pinging d1hrt2aivb7twc.cloudfront.net [54.230.98.152] with 32 bytes of data:
+Reply from 54.230.98.152: bytes=32 time=36ms TTL=57
+Reply from 54.230.98.152: bytes=32 time=35ms TTL=57
+Reply from 54.230.98.152: bytes=32 time=32ms TTL=57
+Reply from 54.230.98.152: bytes=32 time=32ms TTL=57
+Reply from 54.230.98.152: bytes=32 time=52ms TTL=57
+Reply from 54.230.98.152: bytes=32 time=48ms TTL=57
+Reply from 54.230.98.152: bytes=32 time=127ms TTL=57
+Reply from 54.230.98.152: bytes=32 time=102ms TTL=57
+Reply from 54.230.98.152: bytes=32 time=41ms TTL=57
+Reply from 54.230.98.152: bytes=32 time=38ms TTL=57
+
+Ping statistics for 54.230.98.152:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 32ms, Maximum = 127ms, Average = 54ms

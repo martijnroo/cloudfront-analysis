@@ -1,0 +1,8 @@
+[Measurement for 10kb at 13:39:05 16.39.2014] 
+Ping request could not find host d2j3h070v7ssnq.cloudfront.net. Please check the name and try again.
+
+Tshark:
+
+  1   0.000000  192.168.1.2 -> 192.168.1.255 UDP 86 Source port: 57621  Destination port: 57621
+  2   0.970118  192.168.1.2 -> 82.96.58.9   SSL 55 Continuation Data
+  3   1.047588   82.96.58.9 -> 192.168.1.2  TCP 66 443→61623 [ACK] Seq=1 Ack=2 Win=887 Len=0 SLE=1 SRE=2

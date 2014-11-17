@@ -1,0 +1,29 @@
+[Measurement for 10kb at 20:02:40 16.02.2014] 
+Tshark:
+
+  1   0.000000 fe80::5ef9:6aff:fe25:83d4 -> fe80::446a:b521:8794:ef65 ICMPv6 86 Neighbor Solicitation for fe80::446a:b521:8794:ef65 from 5c:f9:6a:25:83:d4
+  2   0.000088 fe80::446a:b521:8794:ef65 -> fe80::5ef9:6aff:fe25:83d4 ICMPv6 86 Neighbor Advertisement fe80::446a:b521:8794:ef65 (sol, ovr) is at 00:24:d7:3f:fc:98
+  3   0.000545 HuaweiTe_25:83:d4 -> IntelCor_3f:fc:98 ARP 42 Who has 192.168.1.2?  Tell 192.168.1.1
+  4   0.000572 IntelCor_3f:fc:98 -> HuaweiTe_25:83:d4 ARP 42 192.168.1.2 is at 00:24:d7:3f:fc:98
+  5   0.666305  192.168.1.2 -> 54.230.98.25 TCP 66 64592→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+  6   0.718761 54.230.98.25 -> 192.168.1.2  TCP 66 80→64592 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1400 SACK_PERM=1 WS=128
+  7   0.718908  192.168.1.2 -> 54.230.98.25 TCP 54 64592→80 [ACK] Seq=1 Ack=1 Win=65792 Len=0
+  8   0.729367  192.168.1.2 -> 54.230.98.25 HTTP 151 GET /10kb HTTP/1.1 
+  9   0.772471 54.230.98.25 -> 192.168.1.2  TCP 54 80→64592 [ACK] Seq=1 Ack=98 Win=14720 Len=0
+ 10   0.779220 54.230.98.25 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 11   0.781265 54.230.98.25 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 12   0.781341  192.168.1.2 -> 54.230.98.25 TCP 54 64592→80 [ACK] Seq=98 Ack=2801 Win=65792 Len=0
+ 13   0.781489 54.230.98.25 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 14   0.781530 54.230.98.25 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 15   0.781579  192.168.1.2 -> 54.230.98.25 TCP 54 64592→80 [ACK] Seq=98 Ack=5601 Win=65792 Len=0
+ 16   0.781698 54.230.98.25 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 17   0.781750 54.230.98.25 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 18   0.781800  192.168.1.2 -> 54.230.98.25 TCP 54 64592→80 [ACK] Seq=98 Ack=8401 Win=65792 Len=0
+ 19   0.781901 54.230.98.25 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 20   0.781936 54.230.98.25 -> 192.168.1.2  HTTP 949 HTTP/1.1 200 OK  (application/octet-stream)
+ 21   0.781968  192.168.1.2 -> 54.230.98.25 TCP 54 64592→80 [ACK] Seq=98 Ack=10696 Win=65792 Len=0
+ 22   0.782205  192.168.1.2 -> 54.230.98.25 TCP 54 64592→80 [FIN, ACK] Seq=98 Ack=10696 Win=65792 Len=0
+ 23   0.819176 54.230.98.25 -> 192.168.1.2  TCP 54 80→64592 [FIN, ACK] Seq=10696 Ack=99 Win=14720 Len=0
+ 24   0.819320  192.168.1.2 -> 54.230.98.25 TCP 54 64592→80 [ACK] Seq=99 Ack=10697 Win=65792 Len=0
+ 25   0.863369 54.231.66.104 -> 192.168.1.2  TLSv1.2 107 Encrypted Alert
+ 26   0.915366  192.168.1.2 -> 54.231.66.104 TCP 54 64587→443 [ACK] Seq=1 Ack=54 Win=254 Len=0

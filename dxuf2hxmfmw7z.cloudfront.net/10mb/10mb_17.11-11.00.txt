@@ -1,0 +1,41 @@
+[Measurement for 10mb at 11:05:09 17.05.2014] 
+Tshark:
+
+  1   0.000000  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP segment of a reassembled PDU]
+  2   0.000021  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP segment of a reassembled PDU]
+  3   0.000031  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP segment of a reassembled PDU]
+  4   0.000042  192.168.1.2 -> 72.21.195.190 TLSv1 884 Application Data
+  5   0.000445  192.168.1.2 -> 72.21.195.190 TLSv1 384 Application Data
+  6   0.003786  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP segment of a reassembled PDU]
+  7   0.003806  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP segment of a reassembled PDU]
+  8   0.003816  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP segment of a reassembled PDU]
+  9   0.003829  192.168.1.2 -> 72.21.195.190 TLSv1 884 Application Data
+ 10   0.004240  192.168.1.2 -> 72.21.195.190 TLSv1 393 Application Data
+ 11   0.303370  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP Retransmission] 50825→443 [ACK] Seq=1 Ack=1 Win=260 Len=1360
+ 12   0.307318  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP Retransmission] 50824→443 [ACK] Seq=1 Ack=1 Win=256 Len=1360
+ 13   0.344377 72.21.195.190 -> 192.168.1.2  TCP 54 443→50824 [ACK] Seq=1 Ack=2721 Win=32725 Len=0
+ 14   0.344468  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP Retransmission] 50824→443 [ACK] Seq=2721 Ack=1 Win=256 Len=1360[Reassembly error, protocol TCP: New fragment overlaps old data (retransmission?)]
+ 15   0.344487  192.168.1.2 -> 72.21.195.190 TCP 1214 [TCP Retransmission] 50824→443 [PSH, ACK] Seq=4081 Ack=1 Win=256 Len=1160[Reassembly error, protocol TCP: New fragment overlaps old data (retransmission?)]
+ 16   0.353274 72.21.195.190 -> 192.168.1.2  TCP 54 443→50824 [ACK] Seq=1 Ack=4911 Win=32691 Len=0
+ 17   0.353276 72.21.195.190 -> 192.168.1.2  TCP 54 443→50824 [ACK] Seq=1 Ack=5241 Win=32686 Len=0
+ 18   0.353276 72.21.195.190 -> 192.168.1.2  TCP 54 443→50825 [ACK] Seq=1 Ack=2721 Win=32725 Len=0
+ 19   0.353277 72.21.195.190 -> 192.168.1.2  TCP 54 443→50825 [ACK] Seq=1 Ack=4911 Win=32691 Len=0
+ 20   0.353277 72.21.195.190 -> 192.168.1.2  TCP 54 443→50825 [ACK] Seq=1 Ack=5250 Win=32685 Len=0
+ 21   0.353278 72.21.195.190 -> 192.168.1.2  TLSv1 360 Application Data
+ 22   0.353278 72.21.195.190 -> 192.168.1.2  TLSv1 123 Application Data
+ 23   0.353279 72.21.195.190 -> 192.168.1.2  TLSv1 386 Application Data
+ 24   0.353280 72.21.195.190 -> 192.168.1.2  TLSv1 1255 Application Data
+ 25   0.353370  192.168.1.2 -> 72.21.195.190 TCP 54 50824→443 [ACK] Seq=5241 Ack=1534 Win=260 Len=0
+ 26   0.353499  192.168.1.2 -> 72.21.195.190 TCP 54 50825→443 [ACK] Seq=5250 Ack=376 Win=258 Len=0
+ 27   0.377679  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP segment of a reassembled PDU]
+ 28   0.377701  192.168.1.2 -> 72.21.195.190 TCP 1414 [TCP segment of a reassembled PDU]
+ 29   0.377715  192.168.1.2 -> 72.21.195.190 TLSv1 1021 Application Data
+ 30   0.659677 72.21.195.190 -> 192.168.1.2  TCP 54 [TCP Dup ACK 22#1] 443→50825 [ACK] Seq=376 Ack=5250 Win=32733 Len=0
+ 31   0.660094 72.21.195.190 -> 192.168.1.2  TCP 54 [TCP Dup ACK 24#1] 443→50824 [ACK] Seq=1534 Ack=5241 Win=32733 Len=0
+ 32   0.660392 72.21.195.190 -> 192.168.1.2  TCP 54 [TCP Dup ACK 24#2] 443→50824 [ACK] Seq=1534 Ack=5241 Win=32733 Len=0
+ 33   0.661160 72.21.195.190 -> 192.168.1.2  TCP 54 [TCP Dup ACK 24#3] 443→50824 [ACK] Seq=1534 Ack=5241 Win=32733 Len=0
+ 34   0.661161 72.21.195.190 -> 192.168.1.2  TCP 54 443→50825 [ACK] Seq=376 Ack=7970 Win=32725 Len=0
+ 35   0.661161 72.21.195.190 -> 192.168.1.2  TCP 54 443→50825 [ACK] Seq=376 Ack=8937 Win=32710 Len=0
+ 36   0.661162 72.21.195.190 -> 192.168.1.2  TLSv1 331 Application Data
+ 37   0.661163 72.21.195.190 -> 192.168.1.2  TLSv1 118 Application Data
+ 38   0.661242  192.168.1.2 -> 72.21.195.190 TCP 54 50825→443 [ACK] Seq=8937 Ack=717 Win=257 Len=0

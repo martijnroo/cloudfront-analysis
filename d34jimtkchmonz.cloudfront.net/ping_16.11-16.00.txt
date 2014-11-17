@@ -1,0 +1,17 @@
+
+Pinging d34jimtkchmonz.cloudfront.net [54.230.99.21] with 32 bytes of data:
+Reply from 54.230.99.21: bytes=32 time=32ms TTL=57
+Reply from 54.230.99.21: bytes=32 time=64ms TTL=57
+Reply from 54.230.99.21: bytes=32 time=50ms TTL=57
+Reply from 54.230.99.21: bytes=32 time=40ms TTL=57
+Reply from 54.230.99.21: bytes=32 time=59ms TTL=57
+Reply from 54.230.99.21: bytes=32 time=38ms TTL=57
+Reply from 54.230.99.21: bytes=32 time=36ms TTL=57
+Reply from 54.230.99.21: bytes=32 time=68ms TTL=57
+Reply from 54.230.99.21: bytes=32 time=66ms TTL=57
+Reply from 54.230.99.21: bytes=32 time=52ms TTL=57
+
+Ping statistics for 54.230.99.21:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 32ms, Maximum = 68ms, Average = 50ms

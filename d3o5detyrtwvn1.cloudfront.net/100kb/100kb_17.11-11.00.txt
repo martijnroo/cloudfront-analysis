@@ -1,0 +1,114 @@
+[Measurement for 100kb at 11:03:50 17.03.2014] 
+Tshark:
+
+  1   0.000000  192.168.1.2 -> 64.233.164.189 TCP 54 52103→443 [ACK] Seq=1 Ack=1 Win=253 Len=0
+  2   0.320364  192.168.1.2 -> 74.125.232.193 SSL 55 Continuation Data
+  3   0.376113 74.125.232.193 -> 192.168.1.2  TCP 66 443→52291 [ACK] Seq=1 Ack=2 Win=6604 Len=0 SLE=1 SRE=2
+  4   1.307862  192.168.1.2 -> 54.230.97.250 TCP 66 52547→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+  5   1.348343 54.230.97.250 -> 192.168.1.2  TCP 66 80→52547 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1400 SACK_PERM=1 WS=128
+  6   1.348491  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=1 Ack=1 Win=65792 Len=0
+  7   1.348656  192.168.1.2 -> 54.230.97.250 HTTP 152 GET /100kb HTTP/1.1 
+  8   1.376022 54.230.97.250 -> 192.168.1.2  TCP 54 80→52547 [ACK] Seq=1 Ack=99 Win=14720 Len=0
+  9   1.379255 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 10   1.380472 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 11   1.380589  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=2801 Win=65792 Len=0
+ 12   1.382116 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 13   1.382117 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 14   1.382118 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 15   1.382121 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 16   1.382122 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 17   1.382123 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 18   1.382124 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 19   1.382126 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 20   1.382306  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=14001 Win=65792 Len=0
+ 21   1.409704 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 22   1.414087 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 23   1.414089 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 24   1.414090 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 25   1.414189  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=19601 Win=65792 Len=0
+ 26   1.415061 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 27   1.415062 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 28   1.415063 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 29   1.415065 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 30   1.415066 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 31   1.415067 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 32   1.415068 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 33   1.415069 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 34   1.415229  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=30801 Win=65792 Len=0
+ 35   1.418468  192.168.1.2 -> 54.243.222.44 TCP 54 52531→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 36   1.418871  192.168.1.2 -> 54.243.222.44 TCP 54 52527→443 [FIN, ACK] Seq=1 Ack=1 Win=253 Len=0
+ 37   1.419224  192.168.1.2 -> 54.243.222.44 TCP 54 52528→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 38   1.419553  192.168.1.2 -> 54.243.222.44 TCP 54 52529→443 [FIN, ACK] Seq=1 Ack=1 Win=256 Len=0
+ 39   1.419873  192.168.1.2 -> 107.21.101.80 TCP 54 52534→443 [FIN, ACK] Seq=1 Ack=1 Win=255 Len=0
+ 40   1.444390 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 41   1.445093 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 42   1.445153  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=33601 Win=65792 Len=0
+ 43   1.446017 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 44   1.449191 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 45   1.449193 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 46   1.449194 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 47   1.449196 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 48   1.449197 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 49   1.449198 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 50   1.449199 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 51   1.449200 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 52   1.449377  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=46201 Win=65792 Len=0
+ 53   1.502124 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 54   1.503433 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 55   1.503488  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=49001 Win=65792 Len=0
+ 56   1.505585 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 57   1.505587 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 58   1.505588 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 59   1.505590 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 60   1.505591 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 61   1.505591 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 62   1.505593 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 63   1.505594 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 64   1.505595 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 65   1.505596 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 66   1.505775  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=63001 Win=65792 Len=0
+ 67   1.507109 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 68   1.507111 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 69   1.507112 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 70   1.507114 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 71   1.507221  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=68601 Win=65792 Len=0
+ 72   1.533150 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 73   1.534459 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 74   1.534547  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=71401 Win=65792 Len=0
+ 75   1.552116 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 76   1.552117 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 77   1.552119 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 78   1.552120 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 79   1.552121 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 80   1.552122 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 81   1.552123 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 82   1.552124 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 83   1.552125 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 84   1.552295  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=84001 Win=65792 Len=0
+ 85   1.572656 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 86   1.572658 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 87   1.572659 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 88   1.572661 54.243.222.44 -> 192.168.1.2  TCP 54 443→52527 [ACK] Seq=1 Ack=2 Win=88 Len=0
+ 89   1.572662 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 90   1.572662 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 91   1.572664 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 92   1.572664 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 93   1.572666 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 94   1.572666 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 95   1.572864  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=96601 Win=65792 Len=0
+ 96   1.572985 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 97   1.572986 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 98   1.572987 54.243.222.44 -> 192.168.1.2  TCP 54 443→52531 [ACK] Seq=1 Ack=2 Win=85 Len=0
+ 99   1.572987 54.243.222.44 -> 192.168.1.2  TCP 54 443→52528 [ACK] Seq=1 Ack=2 Win=92 Len=0
+100   1.572988 54.243.222.44 -> 192.168.1.2  TCP 54 443→52529 [ACK] Seq=1 Ack=2 Win=92 Len=0
+101   1.572988 107.21.101.80 -> 192.168.1.2  TCP 54 443→52534 [ACK] Seq=1 Ack=2 Win=66 Len=0
+102   1.573083  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=99401 Win=65792 Len=0
+103   1.609544 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+104   1.609546 54.230.97.250 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+105   1.609547 54.230.97.250 -> 192.168.1.2  HTTP 710 HTTP/1.1 200 OK  (application/octet-stream)
+106   1.609622  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=99 Ack=102857 Win=65792 Len=0
+107   1.609758  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [FIN, ACK] Seq=99 Ack=102857 Win=65792 Len=0
+108   1.648606 54.230.97.250 -> 192.168.1.2  TCP 54 80→52547 [FIN, ACK] Seq=102857 Ack=100 Win=14720 Len=0
+109   1.648756  192.168.1.2 -> 54.230.97.250 TCP 54 52547→80 [ACK] Seq=100 Ack=102858 Win=65792 Len=0
+110   2.035441 HuaweiTe_25:83:d4 -> IntelCor_3f:fc:98 ARP 42 Who has 192.168.1.2?  Tell 192.168.1.1
+111   2.035480 IntelCor_3f:fc:98 -> HuaweiTe_25:83:d4 ARP 42 192.168.1.2 is at 00:24:d7:3f:fc:98

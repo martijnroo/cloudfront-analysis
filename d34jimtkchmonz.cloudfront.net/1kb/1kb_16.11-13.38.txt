@@ -1,0 +1,42 @@
+[Measurement for 1kb at 13:44:56 16.44.2014] 
+
+Pinging d34jimtkchmonz.cloudfront.net [54.230.99.36] with 32 bytes of data:
+Reply from 54.230.99.36: bytes=32 time=28ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=48ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=68ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=46ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=39ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=35ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=53ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=51ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=49ms TTL=57
+Reply from 54.230.99.36: bytes=32 time=45ms TTL=57
+
+Ping statistics for 54.230.99.36:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 28ms, Maximum = 68ms, Average = 46ms
+
+Tshark:
+
+  1   0.000000 fe80::5ef9:6aff:fe25:83d4 -> fe80::446a:b521:8794:ef65 ICMPv6 86 Neighbor Solicitation for fe80::446a:b521:8794:ef65 from 5c:f9:6a:25:83:d4
+  2   0.000074 fe80::446a:b521:8794:ef65 -> fe80::5ef9:6aff:fe25:83d4 ICMPv6 86 Neighbor Advertisement fe80::446a:b521:8794:ef65 (sol, ovr) is at 00:24:d7:3f:fc:98
+  3   0.659215  192.168.1.2 -> 54.230.99.36 TCP 66 61770→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+  4   0.693664  192.168.1.2 -> 192.168.1.255 UDP 86 Source port: 57621  Destination port: 57621
+  5   0.717427 54.230.99.36 -> 192.168.1.2  TCP 66 80→61770 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1400 SACK_PERM=1 WS=128
+  6   0.717637  192.168.1.2 -> 54.230.99.36 TCP 54 61770→80 [ACK] Seq=1 Ack=1 Win=65792 Len=0
+  7   0.717779  192.168.1.2 -> 54.230.99.36 HTTP 150 GET /1kb HTTP/1.1 
+  8   0.749515 54.230.99.36 -> 192.168.1.2  TCP 54 80→61770 [ACK] Seq=1 Ack=97 Win=14720 Len=0
+  9   0.886551 54.230.99.36 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 10   0.894441 54.230.99.36 -> 192.168.1.2  HTTP 121 HTTP/1.1 200 OK  (application/octet-stream)
+ 11   0.894544  192.168.1.2 -> 54.230.99.36 TCP 54 61770→80 [ACK] Seq=97 Ack=1468 Win=65792 Len=0
+ 12   0.894926  192.168.1.2 -> 54.230.99.36 TCP 54 61770→80 [FIN, ACK] Seq=97 Ack=1468 Win=65792 Len=0
+ 13   0.927153 54.230.99.36 -> 192.168.1.2  TCP 54 80→61770 [FIN, ACK] Seq=1468 Ack=98 Win=14720 Len=0
+ 14   0.927288  192.168.1.2 -> 54.230.99.36 TCP 54 61770→80 [ACK] Seq=98 Ack=1469 Win=65792 Len=0
+ 15   1.944403  192.168.1.2 -> 64.233.164.125 TCP 76 [TCP segment of a reassembled PDU]
+ 16   1.993002 64.233.164.125 -> 192.168.1.2  TCP 54 5222→58187 [ACK] Seq=1 Ack=23 Win=997 Len=0
+ 17   2.566935 HuaweiTe_25:83:d4 -> IntelCor_3f:fc:98 ARP 42 Who has 192.168.1.2?  Tell 192.168.1.1
+ 18   2.566976 IntelCor_3f:fc:98 -> HuaweiTe_25:83:d4 ARP 42 192.168.1.2 is at 00:24:d7:3f:fc:98
+ 19   4.170885 173.255.112.173 -> 192.168.1.2  TLSv1.2 100 Application Data
+ 20   4.220270  192.168.1.2 -> 173.255.112.173 TCP 54 59292→443 [ACK] Seq=1 Ack=47 Win=256 Len=0
+ 21   5.071422  192.168.1.2 -> 54.230.99.36 ICMP 74 Echo (ping) request  id=0x0001, seq=275/4865, ttl=128

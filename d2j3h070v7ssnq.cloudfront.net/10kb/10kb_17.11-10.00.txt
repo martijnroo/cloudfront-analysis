@@ -1,0 +1,28 @@
+[Measurement for 10kb at 10:00:54 17.00.2014] 
+Tshark:
+
+  1   0.000000 fe80::446a:b521:8794:ef65 -> fe80::5ef9:6aff:fe25:83d4 ICMPv6 86 Neighbor Solicitation for fe80::5ef9:6aff:fe25:83d4 from 00:24:d7:3f:fc:98
+  2   0.006400 fe80::5ef9:6aff:fe25:83d4 -> fe80::446a:b521:8794:ef65 ICMPv6 78 Neighbor Advertisement fe80::5ef9:6aff:fe25:83d4 (sol)
+  3   1.010468  192.168.1.2 -> 54.230.99.193 TCP 66 51998→80 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+  4   1.057112 54.230.99.193 -> 192.168.1.2  TCP 66 80→51998 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1400 SACK_PERM=1 WS=128
+  5   1.057264  192.168.1.2 -> 54.230.99.193 TCP 54 51998→80 [ACK] Seq=1 Ack=1 Win=65792 Len=0
+  6   1.067114  192.168.1.2 -> 54.230.99.193 HTTP 151 GET /10kb HTTP/1.1 
+  7   1.097327 54.230.99.193 -> 192.168.1.2  TCP 54 80→51998 [ACK] Seq=1 Ack=98 Win=14720 Len=0
+  8   1.098937 54.230.99.193 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+  9   1.102155 54.230.99.193 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 10   1.102156 54.230.99.193 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 11   1.102157 54.230.99.193 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 12   1.102159 54.230.99.193 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 13   1.102161 54.230.99.193 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 14   1.102161 54.230.99.193 -> 192.168.1.2  TCP 1454 [TCP segment of a reassembled PDU]
+ 15   1.102330  192.168.1.2 -> 54.230.99.193 TCP 54 51998→80 [ACK] Seq=98 Ack=9801 Win=65792 Len=0
+ 16   1.102957 54.230.99.193 -> 192.168.1.2  HTTP 949 HTTP/1.1 200 OK  (application/octet-stream)
+ 17   1.103030  192.168.1.2 -> 54.230.99.193 TCP 54 51998→80 [ACK] Seq=98 Ack=10696 Win=64768 Len=0
+ 18   1.103142  192.168.1.2 -> 54.230.99.193 TCP 54 51998→80 [FIN, ACK] Seq=98 Ack=10696 Win=64768 Len=0
+ 19   1.141295 54.230.99.193 -> 192.168.1.2  TCP 54 80→51998 [FIN, ACK] Seq=10696 Ack=99 Win=14720 Len=0
+ 20   1.141440  192.168.1.2 -> 54.230.99.193 TCP 54 51998→80 [ACK] Seq=99 Ack=10697 Win=64768 Len=0
+ 21   1.506334  192.168.1.2 -> 72.21.195.190 SSL 55 Continuation Data
+ 22   1.672157 72.21.195.190 -> 192.168.1.2  TCP 54 443→50825 [ACK] Seq=1 Ack=2 Win=32768 Len=0
+ 23   1.672612 173.255.112.173 -> 192.168.1.2  TLSv1.2 100 Application Data
+ 24   1.722520  192.168.1.2 -> 173.255.112.173 TCP 54 51329→443 [ACK] Seq=1 Ack=47 Win=254 Len=0
+ 25   1.895370 fe80::5ef9:6aff:fe25:83d4 -> ff02::1      ICMPv6 86 Router Advertisement from 5c:f9:6a:25:83:d4

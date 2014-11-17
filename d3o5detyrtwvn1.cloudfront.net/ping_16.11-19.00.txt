@@ -1,0 +1,17 @@
+
+Pinging d3o5detyrtwvn1.cloudfront.net [54.230.99.89] with 32 bytes of data:
+Reply from 54.230.99.89: bytes=32 time=34ms TTL=57
+Reply from 54.230.99.89: bytes=32 time=35ms TTL=57
+Reply from 54.230.99.89: bytes=32 time=56ms TTL=57
+Reply from 54.230.99.89: bytes=32 time=56ms TTL=57
+Reply from 54.230.99.89: bytes=32 time=65ms TTL=57
+Reply from 54.230.99.89: bytes=32 time=77ms TTL=57
+Reply from 54.230.99.89: bytes=32 time=65ms TTL=57
+Reply from 54.230.99.89: bytes=32 time=45ms TTL=57
+Reply from 54.230.99.89: bytes=32 time=46ms TTL=57
+Reply from 54.230.99.89: bytes=32 time=43ms TTL=57
+
+Ping statistics for 54.230.99.89:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 34ms, Maximum = 77ms, Average = 52ms

@@ -1,0 +1,17 @@
+
+Pinging d2j3h070v7ssnq.cloudfront.net [54.230.98.58] with 32 bytes of data:
+Reply from 54.230.98.58: bytes=32 time=33ms TTL=57
+Reply from 54.230.98.58: bytes=32 time=49ms TTL=57
+Reply from 54.230.98.58: bytes=32 time=45ms TTL=57
+Reply from 54.230.98.58: bytes=32 time=44ms TTL=57
+Reply from 54.230.98.58: bytes=32 time=41ms TTL=57
+Reply from 54.230.98.58: bytes=32 time=43ms TTL=57
+Reply from 54.230.98.58: bytes=32 time=40ms TTL=57
+Reply from 54.230.98.58: bytes=32 time=36ms TTL=57
+Reply from 54.230.98.58: bytes=32 time=54ms TTL=57
+Reply from 54.230.98.58: bytes=32 time=34ms TTL=57
+
+Ping statistics for 54.230.98.58:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 33ms, Maximum = 54ms, Average = 41ms
