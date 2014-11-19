@@ -1,0 +1,30 @@
+scp -i amazon.pem measure.sh ubuntu@54.77.0.172:~/measurements/measure.sh
+scp -i singapore.pem measure.sh ubuntu@54.169.155.102:~/measurements/measure.sh
+scp -i california.pem measure.sh ubuntu@54.67.73.23:~/measurements/measure.sh
+
+ssh -i amazon.pem ubuntu@54.77.0.172
+ssh -i singapore.pem ubuntu@54.169.155.102
+ssh -i california.pem ubuntu@54.67.73.23
+
+00 *   * * *   root    cd /home/ubuntu/measurements && sudo bash measure.sh ireland
+00 *   * * *   root    cd /home/ubuntu/measurements && sudo bash measure.sh singapore
+00 *   * * *   root    cd /home/ubuntu/measurements && sudo bash measure.sh california
+
+
+ireland 54.77.0.172
+Singapore 54.169.155.102
+California 54.67.73.23
+
+sudo apt-get install -y tshark
+
+
+Home computer run - site - EC2 instance
+d17xdwadnyh5jz saopaulo d39wppo36gwqpx
+d2j3h070v7ssnq usstandard d3796nkzln59xv
+d1mwrzpabofbyf singapore d1xvcg6dfvgaki
+d1hrt2aivb7twc oregon d1dx94olpiqj0t
+d2btk8vfxgin4t ireland d1xzxs93r3iphc
+d34jimtkchmonz frankfurt dm53kc3eax57k
+d3o5detyrtwvn1 california d1n0gskdvzj94j
+d1eenfr2uwy1l3 tokyo d3m1c4hwkgedal
+dxuf2hxmfmw7z sydney d2pcb72msibvx3
