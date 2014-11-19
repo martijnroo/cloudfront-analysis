@@ -22,7 +22,7 @@ do
         file=$url\/$site\/$query\/$query\_$now.txt
         echo "[Measurement for $query at $(date +"%T %d.%M.%Y")] " > $file
         echo "Tshark:"$'\n' >> $file
-        #tshark -i wlan0 -a duration:3 >> $file & sleep 2; curl $url/$site/$query >/dev/null
+        #tshark -i wlan0 -a duration:3 >> $file & sleep 2; curl $url/$query >/dev/null
         "C:\Program Files\Wireshark\tshark.exe" -a duration:3 >> $file & sleep 2; curl $url/$query >/dev/null
         sleep 2
     done
