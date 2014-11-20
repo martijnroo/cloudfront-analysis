@@ -1,0 +1,28 @@
+[Measurement for 1mb at 17:36:45 19.36.2014] 
+Tshark:
+
+  1   0.000000 85.76.134.238 -> 172.31.29.138 SSH 102 Encrypted request packet len=48
+  2   0.000169 172.31.29.138 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  3   0.172810 85.76.134.238 -> 172.31.29.138 SSH 102 Encrypted request packet len=48
+  4   0.172963 172.31.29.138 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  5   0.312871 85.76.134.238 -> 172.31.29.138 SSH 102 Encrypted request packet len=48
+  6   0.313027 172.31.29.138 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  7   0.472604 85.76.134.238 -> 172.31.29.138 SSH 102 Encrypted request packet len=48
+  8   0.472755 172.31.29.138 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  9   0.572537 85.76.134.238 -> 172.31.29.138 SSH 102 Encrypted request packet len=48
+ 10   0.572686 172.31.29.138 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 11   0.632601 85.76.134.238 -> 172.31.29.138 TCP 54 18563 > ssh [ACK] Seq=241 Ack=145 Win=252 Len=0
+ 12   0.672583 85.76.134.238 -> 172.31.29.138 SSH 102 Encrypted request packet len=48
+ 13   0.673675 172.31.29.138 -> 85.76.134.238 SSH 150 Encrypted response packet len=96
+ 14   0.792735 85.76.134.238 -> 172.31.29.138 TCP 54 18563 > ssh [ACK] Seq=289 Ack=193 Win=252 Len=0
+ 15   0.972788 85.76.134.238 -> 172.31.29.138 TCP 54 18563 > ssh [ACK] Seq=289 Ack=241 Win=251 Len=0
+ 16   1.012674 85.76.134.238 -> 172.31.29.138 TCP 54 18563 > ssh [ACK] Seq=289 Ack=337 Win=251 Len=0
+ 17   1.217880 172.31.29.138 -> 172.31.0.2   DNS 89 Standard query 0x0822  A d3796nkzln59xv.cloudfront.net
+ 18   1.217899 172.31.29.138 -> 172.31.0.2   DNS 89 Standard query 0xc65d  AAAA d3796nkzln59xv.cloudfront.net
+ 19   1.218631   172.31.0.2 -> 172.31.29.138 DNS 217 Standard query response 0x0822  A 54.192.157.152 A 54.192.159.78 A 54.230.158.137 A 54.230.158.223 A 54.230.159.4 A 54.230.159.132 A 54.230.159.144 A 54.230.159.152
+ 20   1.218643   172.31.0.2 -> 172.31.29.138 DNS 170 Standard query response 0xc65d 
+ 21   1.221787 172.31.29.138 -> 54.192.157.152 TCP 74 50045 > http [SYN] Seq=0 Win=26883 Len=0 MSS=8961 SACK_PERM=1 TSval=619596 TSecr=0 WS=128
+ 22   1.222343 54.192.157.152 -> 172.31.29.138 TCP 74 http > 50045 [SYN, ACK] Seq=0 Ack=1 Win=14480 Len=0 MSS=1460 SACK_PERM=1 TSval=837653528 TSecr=619596 WS=128
+ 23   1.222357 172.31.29.138 -> 54.192.157.152 TCP 66 50045 > http [ACK] Seq=1 Ack=1 Win=27008 Len=0 TSval=619596 TSecr=837653528
+ 24   1.222395 172.31.29.138 -> 54.192.157.152 HTTP 162 GET /1mb HTTP/1.1 
+ 25   1.222938 54.192.157.152 -> 172.31.29.138 TCP 66 http > 50045 [ACK] Seq=1 Ack=97 Win=14592 Len=0 TSval=837653528 TSecr=619596

@@ -1,0 +1,15 @@
+PING d2pcb72msibvx3.cloudfront.net (54.192.159.73) 56(84) bytes of data.
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=1 ttl=62 time=0.585 ms
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=2 ttl=62 time=0.782 ms
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=3 ttl=62 time=0.728 ms
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=4 ttl=62 time=0.717 ms
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=5 ttl=62 time=0.661 ms
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=6 ttl=62 time=0.914 ms
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=7 ttl=62 time=0.781 ms
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=8 ttl=62 time=0.831 ms
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=9 ttl=62 time=0.727 ms
+64 bytes from server-54-192-159-73.sin3.r.cloudfront.net (54.192.159.73): icmp_seq=10 ttl=62 time=0.673 ms
+
+--- d2pcb72msibvx3.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 8999ms
+rtt min/avg/max/mdev = 0.585/0.739/0.914/0.095 ms

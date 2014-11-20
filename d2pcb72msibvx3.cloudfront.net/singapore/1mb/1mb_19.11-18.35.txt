@@ -1,0 +1,4 @@
+[Measurement for 1mb at 18:39:18 19.39.2014] 
+Tshark:
+
+  1   0.000000 172.31.29.138 -> 172.31.0.2   DNS 89 Standard query 0xa977  A d2pcb72msibvx3.cloudfront.net

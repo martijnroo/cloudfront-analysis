@@ -1,0 +1,15 @@
+PING d3m1c4hwkgedal.cloudfront.net (54.192.159.101) 56(84) bytes of data.
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=1 ttl=62 time=0.616 ms
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=2 ttl=62 time=0.601 ms
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=3 ttl=62 time=0.731 ms
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=4 ttl=62 time=0.712 ms
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=5 ttl=62 time=0.683 ms
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=6 ttl=62 time=0.560 ms
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=7 ttl=62 time=0.586 ms
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=8 ttl=62 time=0.551 ms
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=9 ttl=62 time=0.647 ms
+64 bytes from server-54-192-159-101.sin3.r.cloudfront.net (54.192.159.101): icmp_seq=10 ttl=62 time=0.418 ms
+
+--- d3m1c4hwkgedal.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9001ms
+rtt min/avg/max/mdev = 0.418/0.610/0.731/0.090 ms

@@ -1,0 +1,6 @@
+[Measurement for 10kb at 05:39:09 20.39.2014] 
+Tshark:
+
+  1   0.000000 06:38:16:87:8c:c2 -> 06:4e:73:56:a6:a6 ARP 60 Who has 172.31.29.138?  Tell 172.31.16.1
+  2   0.000023 06:4e:73:56:a6:a6 -> 06:38:16:87:8c:c2 ARP 42 172.31.29.138 is at 06:4e:73:56:a6:a6
+  3   1.476963 172.31.29.138 -> 172.31.0.2   DNS 89 Standard query 0xe9cf  A d2pcb72msibvx3.cloudfront.net
