@@ -13,7 +13,7 @@ function convert_url {
 		"d1n0gskdvzj94j") echo "california" && return;;
 		"d3m1c4hwkgedal") echo "tokyo" && return;;
 		"d2pcb72msibvx3") echo "sydney" && return;;
-		*) echo "n/a";;
+		*) echo "";;
 	esac
 }
 
@@ -30,6 +30,10 @@ do
 		do
 			datetime=$(echo $file | cut -d'/' -f 3 | cut -d'_' -f 2 | cut -d'.' -f 1-3)
 			avg=$(cat $file | grep Average | awk '{print $9}' | cut -c1-2)
+			if [ $avg="" ]
+			then
+				avg=$(cat $file | grep avg | cut -d'/' -f 5)
+			fi
 
 			diffs=""
 			for size in 1kb 10kb 100kb 1mb 10mb
