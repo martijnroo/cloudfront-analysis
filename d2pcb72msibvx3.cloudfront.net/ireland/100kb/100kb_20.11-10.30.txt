@@ -1,0 +1,4 @@
+[Measurement for 100kb at 10:34:36 20.34.2014] 
+Tshark:
+
+  1   0.000000 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0xc9ff  A d2pcb72msibvx3.cloudfront.net

@@ -1,0 +1,15 @@
+PING d3796nkzln59xv.cloudfront.net (54.230.23.43) 56(84) bytes of data.
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=1 ttl=56 time=85.5 ms
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=2 ttl=56 time=85.7 ms
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=3 ttl=56 time=85.5 ms
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=4 ttl=56 time=85.4 ms
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=5 ttl=56 time=85.5 ms
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=6 ttl=56 time=85.7 ms
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=7 ttl=56 time=85.8 ms
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=8 ttl=56 time=85.6 ms
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=9 ttl=56 time=85.7 ms
+64 bytes from server-54-230-23-43.ewr2.r.cloudfront.net (54.230.23.43): icmp_seq=10 ttl=56 time=85.4 ms
+
+--- d3796nkzln59xv.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9014ms
+rtt min/avg/max/mdev = 85.420/85.628/85.809/0.323 ms

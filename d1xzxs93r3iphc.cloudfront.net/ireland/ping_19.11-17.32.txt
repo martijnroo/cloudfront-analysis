@@ -1,0 +1,15 @@
+PING d1xzxs93r3iphc.cloudfront.net (54.230.30.17) 56(84) bytes of data.
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=1 ttl=60 time=1.57 ms
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=2 ttl=60 time=1.51 ms
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=3 ttl=60 time=1.53 ms
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=4 ttl=60 time=1.81 ms
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=5 ttl=60 time=1.45 ms
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=6 ttl=60 time=1.93 ms
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=7 ttl=60 time=1.72 ms
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=8 ttl=60 time=1.80 ms
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=9 ttl=60 time=1.71 ms
+64 bytes from server-54-230-30-17.dub2.r.cloudfront.net (54.230.30.17): icmp_seq=10 ttl=60 time=2.51 ms
+
+--- d1xzxs93r3iphc.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9015ms
+rtt min/avg/max/mdev = 1.456/1.760/2.516/0.291 ms

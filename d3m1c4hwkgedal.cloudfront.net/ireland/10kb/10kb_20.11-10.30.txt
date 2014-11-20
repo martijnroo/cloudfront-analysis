@@ -1,0 +1,4 @@
+[Measurement for 10kb at 10:34:02 20.34.2014] 
+Tshark:
+
+  1   0.000000 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0xf0b2  A d3m1c4hwkgedal.cloudfront.net

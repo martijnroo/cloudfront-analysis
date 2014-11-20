@@ -1,0 +1,30 @@
+[Measurement for 1kb at 17:32:58 19.32.2014] 
+Tshark:
+
+  1   0.000000 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+  2   0.000146 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  3   0.120351 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=49 Ack=49 Win=252 Len=0
+  4   0.920058 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+  5   0.920197 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  6   1.041187 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=97 Ack=97 Win=252 Len=0
+  7   1.080040 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+  8   1.080105 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  9   1.200144 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=145 Ack=145 Win=251 Len=0
+ 10   1.280044 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 11   1.280115 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 12   1.400117 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=193 Ack=193 Win=251 Len=0
+ 13   1.439976 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 14   1.440075 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 15   1.470720 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0xd816  A d3796nkzln59xv.cloudfront.net
+ 16   1.470748 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0x8239  AAAA d3796nkzln59xv.cloudfront.net
+ 17   1.471222   172.31.0.2 -> 172.31.36.109 DNS 217 Standard query response 0xd816  A 54.230.30.220 A 54.230.30.246 A 54.230.31.4 A 54.192.29.219 A 54.192.29.221 A 54.230.30.5 A 54.230.30.57 A 54.230.30.206
+ 18   1.496157   172.31.0.2 -> 172.31.36.109 DNS 170 Standard query response 0x8239 
+ 19   1.501128 172.31.36.109 -> 54.230.30.220 TCP 74 54594 > http [SYN] Seq=0 Win=26883 Len=0 MSS=8961 SACK_PERM=1 TSval=20516232 TSecr=0 WS=128
+ 20   1.502488 54.230.30.220 -> 172.31.36.109 TCP 74 http > 54594 [SYN, ACK] Seq=0 Ack=1 Win=14480 Len=0 MSS=1460 SACK_PERM=1 TSval=718216058 TSecr=20516232 WS=128
+ 21   1.502500 172.31.36.109 -> 54.230.30.220 TCP 66 54594 > http [ACK] Seq=1 Ack=1 Win=27008 Len=0 TSval=20516232 TSecr=718216058
+ 22   1.502546 172.31.36.109 -> 54.230.30.220 HTTP 162 GET /1kb HTTP/1.1 
+ 23   1.503715 54.230.30.220 -> 172.31.36.109 TCP 66 http > 54594 [ACK] Seq=1 Ack=97 Win=14592 Len=0 TSval=718216059 TSecr=20516232
+ 24   1.559957 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=241 Ack=241 Win=251 Len=0
+ 25   1.679902 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 26   1.680958 172.31.36.109 -> 85.76.134.238 SSH 150 Encrypted response packet len=96
+ 27   1.799943 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=289 Ack=337 Win=257 Len=0

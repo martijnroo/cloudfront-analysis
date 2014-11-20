@@ -1,0 +1,4 @@
+[Measurement for 10kb at 23:32:19 19.32.2014] 
+Tshark:
+
+  1   0.000000 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0xb632  A d1xzxs93r3iphc.cloudfront.net

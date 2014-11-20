@@ -1,0 +1,15 @@
+PING d1dx94olpiqj0t.cloudfront.net (54.230.30.235) 56(84) bytes of data.
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=1 ttl=60 time=1.11 ms
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=2 ttl=60 time=1.20 ms
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=3 ttl=60 time=1.24 ms
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=4 ttl=60 time=1.28 ms
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=5 ttl=60 time=3.15 ms
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=6 ttl=60 time=1.13 ms
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=7 ttl=60 time=1.12 ms
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=8 ttl=60 time=1.32 ms
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=9 ttl=60 time=1.27 ms
+64 bytes from server-54-230-30-235.dub2.r.cloudfront.net (54.230.30.235): icmp_seq=10 ttl=60 time=1.10 ms
+
+--- d1dx94olpiqj0t.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9012ms
+rtt min/avg/max/mdev = 1.102/1.396/3.151/0.591 ms

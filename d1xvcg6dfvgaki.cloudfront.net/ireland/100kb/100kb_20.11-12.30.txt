@@ -1,0 +1,14 @@
+[Measurement for 100kb at 12:31:20 20.31.2014] 
+Tshark:
+
+  1   0.000000 06:ab:f2:b7:83:1d -> 06:87:bf:67:ca:e7 ARP 60 Who has 172.31.36.109?  Tell 172.31.32.1
+  2   0.000022 06:87:bf:67:ca:e7 -> 06:ab:f2:b7:83:1d ARP 42 172.31.36.109 is at 06:87:bf:67:ca:e7
+  3   0.017255 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0xab7a  A d1xvcg6dfvgaki.cloudfront.net
+  4   0.017273 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0xdbcb  AAAA d1xvcg6dfvgaki.cloudfront.net
+  5   0.017906   172.31.0.2 -> 172.31.36.109 DNS 217 Standard query response 0xab7a  A 54.230.29.254 A 54.230.30.6 A 54.230.30.28 A 54.230.30.68 A 54.230.30.189 A 54.192.30.187 A 54.192.30.194 A 54.192.30.222
+  6   0.017916   172.31.0.2 -> 172.31.36.109 DNS 170 Standard query response 0xdbcb 
+  7   0.021142 172.31.36.109 -> 54.230.29.254 TCP 74 44332 > http [SYN] Seq=0 Win=26883 Len=0 MSS=8961 SACK_PERM=1 TSval=37591624 TSecr=0 WS=128
+  8   0.022434 54.230.29.254 -> 172.31.36.109 TCP 74 http > 44332 [SYN, ACK] Seq=0 Ack=1 Win=14480 Len=0 MSS=1460 SACK_PERM=1 TSval=721465474 TSecr=37591624 WS=128
+  9   0.022448 172.31.36.109 -> 54.230.29.254 TCP 66 44332 > http [ACK] Seq=1 Ack=1 Win=27008 Len=0 TSval=37591625 TSecr=721465474
+ 10   0.022505 172.31.36.109 -> 54.230.29.254 HTTP 164 GET /100kb HTTP/1.1 
+ 11   0.023733 54.230.29.254 -> 172.31.36.109 TCP 66 http > 44332 [ACK] Seq=1 Ack=99 Win=14592 Len=0 TSval=721465475 TSecr=37591625

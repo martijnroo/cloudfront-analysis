@@ -1,0 +1,4 @@
+[Measurement for 1kb at 00:30:10 20.30.2014] 
+Tshark:
+
+  1   0.000000 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0xeb27  A d39wppo36gwqpx.cloudfront.net

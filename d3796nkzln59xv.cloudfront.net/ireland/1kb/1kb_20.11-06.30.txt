@@ -1,0 +1,4 @@
+[Measurement for 1kb at 06:30:41 20.30.2014] 
+Tshark:
+
+  1   0.000000 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0x22c7  A d3796nkzln59xv.cloudfront.net

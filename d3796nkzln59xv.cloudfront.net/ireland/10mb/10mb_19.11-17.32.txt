@@ -1,0 +1,88 @@
+[Measurement for 10mb at 17:33:18 19.33.2014] 
+Tshark:
+
+  1   0.000000 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+  2   0.000175 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  3   0.040967 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+  4   0.041122 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  5   0.080146 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+  6   0.080222 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  7   0.119860 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+  8   0.119946 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  9   0.160024 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 10   0.160106 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 11   0.202031 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 12   0.202159 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 13   0.239895 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 14   0.239976 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 15   0.280036 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 16   0.280121 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 17   0.320035 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 18   0.320117 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 19   0.360129 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 20   0.360223 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 21   0.399972 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 22   0.400121 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 23   0.439960 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 24   0.440117 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 25   0.479969 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 26   0.480144 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 27   0.520139 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 28   0.520285 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 29   0.559855 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 30   0.559998 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 31   0.620001 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 32   0.620023 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=769 Ack=673 Win=256 Len=0
+ 33   0.620153 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 34   0.639989 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 35   0.640117 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 36   0.680165 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 37   0.680303 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 38   0.720053 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 39   0.720217 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 40   0.760053 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 41   0.760198 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 42   0.799937 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 43   0.800085 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 44   0.839881 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 45   0.840035 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 46   0.880096 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 47   0.880234 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 48   0.919863 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 49   0.919963 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 50   0.960145 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 51   0.960249 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 52   1.019887 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=1201 Ack=1105 Win=254 Len=0
+ 53   1.040049 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=1201 Ack=1201 Win=254 Len=0
+ 54   1.519978 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 55   1.520131 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 56   1.536632 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0x8c83  A d3796nkzln59xv.cloudfront.net
+ 57   1.536649 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0x8215  AAAA d3796nkzln59xv.cloudfront.net
+ 58   1.537166   172.31.0.2 -> 172.31.36.109 DNS 170 Standard query response 0x8215 
+ 59   1.537174   172.31.0.2 -> 172.31.36.109 DNS 217 Standard query response 0x8c83  A 54.192.29.221 A 54.230.30.5 A 54.230.30.57 A 54.230.30.206 A 54.230.30.220 A 54.230.30.246 A 54.230.31.4 A 54.192.29.219
+ 60   1.540535 172.31.36.109 -> 54.192.29.221 TCP 74 57886 > http [SYN] Seq=0 Win=26883 Len=0 MSS=8961 SACK_PERM=1 TSval=20521267 TSecr=0 WS=128
+ 61   1.541753 54.192.29.221 -> 172.31.36.109 TCP 74 http > 57886 [SYN, ACK] Seq=0 Ack=1 Win=14480 Len=0 MSS=1460 SACK_PERM=1 TSval=691924097 TSecr=20521267 WS=128
+ 62   1.541766 172.31.36.109 -> 54.192.29.221 TCP 66 57886 > http [ACK] Seq=1 Ack=1 Win=27008 Len=0 TSval=20521267 TSecr=691924097
+ 63   1.541805 172.31.36.109 -> 54.192.29.221 HTTP 163 GET /10mb HTTP/1.1 
+ 64   1.542831 54.192.29.221 -> 172.31.36.109 TCP 66 http > 57886 [ACK] Seq=1 Ack=98 Win=14592 Len=0 TSval=691924097 TSecr=20521267
+ 65   1.660200 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=1249 Ack=1249 Win=254 Len=0
+ 66   1.760237 85.76.134.238 -> 172.31.36.109 SSH 102 Encrypted request packet len=48
+ 67   1.760379 172.31.36.109 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+ 68   1.788128 54.192.29.221 -> 172.31.36.109 TCP 2962 [TCP segment of a reassembled PDU]
+ 69   1.788153 172.31.36.109 -> 54.192.29.221 TCP 66 57886 > http [ACK] Seq=98 Ack=2897 Win=32768 Len=0 TSval=20521329 TSecr=691924122
+ 70   1.788330 54.192.29.221 -> 172.31.36.109 TCP 10505 [TCP segment of a reassembled PDU]
+ 71   1.788341 172.31.36.109 -> 54.192.29.221 TCP 66 57886 > http [ACK] Seq=98 Ack=13336 Win=53632 Len=0 TSval=20521329 TSecr=691924122
+ 72   1.879999 85.76.134.238 -> 172.31.36.109 TCP 54 9799 > ssh [ACK] Seq=1297 Ack=1297 Win=254 Len=0
+ 73   1.883560 54.192.29.221 -> 172.31.36.109 TCP 1498 [TCP segment of a reassembled PDU]
+ 74   1.883572 172.31.36.109 -> 54.192.29.221 TCP 66 57886 > http [ACK] Seq=98 Ack=14768 Win=56576 Len=0 TSval=20521353 TSecr=691924131
+ 75   1.883757 54.192.29.221 -> 172.31.36.109 TCP 1514 [TCP segment of a reassembled PDU]
+ 76   1.883762 172.31.36.109 -> 54.192.29.221 TCP 66 57886 > http [ACK] Seq=98 Ack=16216 Win=59392 Len=0 TSval=20521353 TSecr=691924131
+ 77   1.885382 54.192.29.221 -> 172.31.36.109 TCP 4410 [TCP segment of a reassembled PDU]
+ 78   1.885389 172.31.36.109 -> 54.192.29.221 TCP 66 57886 > http [ACK] Seq=98 Ack=20560 Win=68096 Len=0 TSval=20521353 TSecr=691924132
+ 79   1.885412 54.192.29.221 -> 172.31.36.109 TCP 2962 [TCP segment of a reassembled PDU]
+ 80   1.885417 172.31.36.109 -> 54.192.29.221 TCP 66 57886 > http [ACK] Seq=98 Ack=23456 Win=73856 Len=0 TSval=20521353 TSecr=691924132
+ 81   1.885460 54.192.29.221 -> 172.31.36.109 TCP 1514 [TCP segment of a reassembled PDU]
+ 82   1.885465 172.31.36.109 -> 54.192.29.221 TCP 66 57886 > http [ACK] Seq=98 Ack=24904 Win=76800 Len=0 TSval=20521353 TSecr=691924132
+ 83   1.885618 54.192.29.221 -> 172.31.36.109 TCP 7114 [TCP segment of a reassembled PDU]
+ 84   1.885625 172.31.36.109 -> 54.192.29.221 TCP 66 57886 > http [ACK] Seq=98 Ack=31952 Win=90880 Len=0 TSval=20521353 TSecr=691924132
+ 85   1.979590 54.192.29.221 -> 172.31.36.109 TCP 2946 [TCP segment of a reassembled PDU]

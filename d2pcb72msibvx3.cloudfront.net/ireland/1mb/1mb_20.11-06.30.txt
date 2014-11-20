@@ -1,0 +1,45 @@
+[Measurement for 1mb at 06:34:32 20.34.2014] 
+Tshark:
+
+  1   0.000000 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0x420d  A d2pcb72msibvx3.cloudfront.net
+  2   0.000029 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0xb102  AAAA d2pcb72msibvx3.cloudfront.net
+  3   0.000479   172.31.0.2 -> 172.31.36.109 DNS 217 Standard query response 0x420d  A 54.230.20.3 A 54.230.20.109 A 54.230.20.181 A 54.230.20.193 A 54.230.21.79 A 54.230.22.128 A 54.230.22.176 A 216.137.41.227
+  4   0.000489   172.31.0.2 -> 172.31.36.109 DNS 169 Standard query response 0xb102 
+  5   0.003864 172.31.36.109 -> 54.230.20.3  TCP 74 nimcontroller > http [SYN] Seq=0 Win=26883 Len=0 MSS=8961 SACK_PERM=1 TSval=32239700 TSecr=0 WS=128
+  6   0.092108  54.230.20.3 -> 172.31.36.109 TCP 74 http > nimcontroller [SYN, ACK] Seq=0 Ack=1 Win=14480 Len=0 MSS=1460 SACK_PERM=1 TSval=925802191 TSecr=32239700 WS=128
+  7   0.092128 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=1 Ack=1 Win=27008 Len=0 TSval=32239722 TSecr=925802191
+  8   0.092183 172.31.36.109 -> 54.230.20.3  HTTP 162 GET /1mb HTTP/1.1 
+  9   0.180417  54.230.20.3 -> 172.31.36.109 TCP 66 http > nimcontroller [ACK] Seq=1 Ack=97 Win=14592 Len=0 TSval=925802200 TSecr=32239722
+ 10   0.186705  54.230.20.3 -> 172.31.36.109 TCP 13555 [TCP segment of a reassembled PDU]
+ 11   0.186724 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=13490 Win=53888 Len=0 TSval=32239746 TSecr=925802200
+ 12   0.274983  54.230.20.3 -> 172.31.36.109 TCP 13098 [TCP segment of a reassembled PDU]
+ 13   0.275003 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=26522 Win=80000 Len=0 TSval=32239768 TSecr=925802209
+ 14   0.363510  54.230.20.3 -> 172.31.36.109 TCP 13098 [TCP segment of a reassembled PDU]
+ 15   0.363520 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=39554 Win=96512 Len=0 TSval=32239790 TSecr=925802218
+ 16   0.452022  54.230.20.3 -> 172.31.36.109 TCP 13098 [TCP segment of a reassembled PDU]
+ 17   0.452034 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=52586 Win=96512 Len=0 TSval=32239812 TSecr=925802227
+ 18   0.540412  54.230.20.3 -> 172.31.36.109 TCP 20338 [TCP segment of a reassembled PDU]
+ 19   0.540427 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=72858 Win=84608 Len=0 TSval=32239834 TSecr=925802236
+ 20   0.628807  54.230.20.3 -> 172.31.36.109 TCP 21786 [TCP segment of a reassembled PDU]
+ 21   0.628819 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=94578 Win=149504 Len=0 TSval=32239856 TSecr=925802245
+ 22   0.717039  54.230.20.3 -> 172.31.36.109 TCP 2962 [TCP segment of a reassembled PDU]
+ 23   0.717048 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=97474 Win=155264 Len=0 TSval=32239878 TSecr=925802254
+ 24   0.717183  54.230.20.3 -> 172.31.36.109 TCP 18890 [TCP segment of a reassembled PDU]
+ 25   0.717195 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=116298 Win=167296 Len=0 TSval=32239878 TSecr=925802254
+ 26   0.717213  54.230.20.3 -> 172.31.36.109 TCP 1514 [TCP segment of a reassembled PDU]
+ 27   0.717216 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=117746 Win=165888 Len=0 TSval=32239878 TSecr=925802254
+ 28   0.805696  54.230.20.3 -> 172.31.36.109 TCP 8754 [TCP segment of a reassembled PDU]
+ 29   0.805706 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=126434 Win=183936 Len=0 TSval=32239901 TSecr=925802262
+ 30   0.805725  54.230.20.3 -> 172.31.36.109 TCP 4410 [TCP segment of a reassembled PDU]
+ 31   0.805730 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=130778 Win=179712 Len=0 TSval=32239901 TSecr=925802262
+ 32   0.805739  54.230.20.3 -> 172.31.36.109 TCP 4410 [TCP segment of a reassembled PDU]
+ 33   0.805742 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=135122 Win=175488 Len=0 TSval=32239901 TSecr=925802262
+ 34   0.805796  54.230.20.3 -> 172.31.36.109 TCP 7306 [TCP segment of a reassembled PDU]
+ 35   0.805803 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=142362 Win=195328 Len=0 TSval=32239901 TSecr=925802262
+ 36   0.894066  54.230.20.3 -> 172.31.36.109 TCP 11650 [TCP segment of a reassembled PDU]
+ 37   0.894076 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=153946 Win=188288 Len=0 TSval=32239923 TSecr=925802271
+ 38   0.894114  54.230.20.3 -> 172.31.36.109 TCP 14546 [TCP segment of a reassembled PDU]
+ 39   0.894125 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=168426 Win=183424 Len=0 TSval=32239923 TSecr=925802271
+ 40   0.894172  54.230.20.3 -> 172.31.36.109 TCP 7306 [TCP segment of a reassembled PDU]
+ 41   0.894179 172.31.36.109 -> 54.230.20.3  TCP 66 nimcontroller > http [ACK] Seq=97 Ack=175666 Win=195328 Len=0 TSval=32239923 TSecr=925802271
+ 42   0.982529  54.230.20.3 -> 172.31.36.109 TCP 7306 [TCP segment of a reassembled PDU]

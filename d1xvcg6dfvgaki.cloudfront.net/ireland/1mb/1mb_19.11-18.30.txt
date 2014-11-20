@@ -1,0 +1,4 @@
+[Measurement for 1mb at 18:33:21 19.33.2014] 
+Tshark:
+
+  1   0.000000 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0x69d5  A d1xvcg6dfvgaki.cloudfront.net

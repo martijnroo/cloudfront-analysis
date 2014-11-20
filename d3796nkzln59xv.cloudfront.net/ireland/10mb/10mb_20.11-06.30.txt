@@ -1,0 +1,4 @@
+[Measurement for 10mb at 06:31:00 20.31.2014] 
+Tshark:
+
+  1   0.000000 172.31.36.109 -> 172.31.0.2   DNS 89 Standard query 0xa762  A d3796nkzln59xv.cloudfront.net

@@ -1,0 +1,15 @@
+PING d39wppo36gwqpx.cloudfront.net (54.230.216.250) 56(84) bytes of data.
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=1 ttl=58 time=80.0 ms
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=2 ttl=58 time=81.2 ms
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=3 ttl=58 time=78.0 ms
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=4 ttl=58 time=80.5 ms
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=5 ttl=58 time=83.4 ms
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=6 ttl=58 time=84.2 ms
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=7 ttl=58 time=82.6 ms
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=8 ttl=58 time=82.9 ms
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=9 ttl=58 time=82.1 ms
+64 bytes from server-54-230-216-250.mrs50.r.cloudfront.net (54.230.216.250): icmp_seq=10 ttl=58 time=84.0 ms
+
+--- d39wppo36gwqpx.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9013ms
+rtt min/avg/max/mdev = 78.036/81.939/84.242/1.857 ms

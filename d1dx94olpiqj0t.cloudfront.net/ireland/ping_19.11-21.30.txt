@@ -1,0 +1,15 @@
+PING d1dx94olpiqj0t.cloudfront.net (54.239.158.178) 56(84) bytes of data.
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=1 ttl=57 time=19.1 ms
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=2 ttl=57 time=19.3 ms
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=3 ttl=57 time=19.3 ms
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=4 ttl=57 time=19.4 ms
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=5 ttl=57 time=19.7 ms
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=6 ttl=57 time=24.1 ms
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=7 ttl=57 time=20.6 ms
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=8 ttl=57 time=19.1 ms
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=9 ttl=57 time=19.2 ms
+64 bytes from server-54-239-158-178.cdg51.r.cloudfront.net (54.239.158.178): icmp_seq=10 ttl=57 time=19.2 ms
+
+--- d1dx94olpiqj0t.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9012ms
+rtt min/avg/max/mdev = 19.112/19.949/24.170/1.479 ms

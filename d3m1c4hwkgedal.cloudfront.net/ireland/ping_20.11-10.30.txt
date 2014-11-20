@@ -1,0 +1,15 @@
+PING d3m1c4hwkgedal.cloudfront.net (54.192.30.188) 56(84) bytes of data.
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=1 ttl=60 time=1.30 ms
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=2 ttl=60 time=1.51 ms
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=3 ttl=60 time=1.64 ms
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=4 ttl=60 time=1.43 ms
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=5 ttl=60 time=1.53 ms
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=6 ttl=60 time=1.68 ms
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=7 ttl=60 time=1.63 ms
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=8 ttl=60 time=1.68 ms
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=9 ttl=60 time=1.54 ms
+64 bytes from server-54-192-30-188.dub2.r.cloudfront.net (54.192.30.188): icmp_seq=10 ttl=60 time=1.84 ms
+
+--- d3m1c4hwkgedal.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9015ms
+rtt min/avg/max/mdev = 1.303/1.584/1.846/0.143 ms
