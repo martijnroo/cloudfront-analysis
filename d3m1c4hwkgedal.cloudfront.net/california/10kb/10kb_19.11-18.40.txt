@@ -1,0 +1,11 @@
+[Measurement for 10kb at 18:44:36 19.44.2014] 
+Tshark:
+
+  1   0.000000 85.76.134.238 -> 172.31.8.238 SSH 102 Encrypted request packet len=48
+  2   0.003832 172.31.8.238 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  3   0.324397 85.76.134.238 -> 172.31.8.238 TCP 54 29664 > ssh [ACK] Seq=49 Ack=49 Win=255 Len=0
+  4   0.604014 85.76.134.238 -> 172.31.8.238 SSH 102 Encrypted request packet len=48
+  5   0.605319 172.31.8.238 -> 85.76.134.238 SSH 518 Encrypted response packet len=464
+  6   0.605453 172.31.8.238 -> 85.76.134.238 SSH 118 Encrypted response packet len=64
+  7   0.864341 85.76.134.238 -> 172.31.8.238 TCP 54 29664 > ssh [ACK] Seq=97 Ack=577 Win=253 Len=0
+  8   1.720057 172.31.8.238 -> 172.31.0.2   DNS 89 Standard query 0x31d4  A d3m1c4hwkgedal.cloudfront.net

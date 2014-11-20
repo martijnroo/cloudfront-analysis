@@ -1,0 +1,4 @@
+[Measurement for 10kb at 09:41:42 20.41.2014] 
+Tshark:
+
+  1   0.000000 172.31.8.238 -> 172.31.0.2   DNS 89 Standard query 0xe7f8  A d1dx94olpiqj0t.cloudfront.net

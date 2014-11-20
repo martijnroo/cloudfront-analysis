@@ -1,0 +1,4 @@
+[Measurement for 10mb at 17:40:33 19.40.2014] 
+Tshark:
+
+  1   0.000000 172.31.8.238 -> 172.31.0.2   DNS 89 Standard query 0xee13  A d39wppo36gwqpx.cloudfront.net

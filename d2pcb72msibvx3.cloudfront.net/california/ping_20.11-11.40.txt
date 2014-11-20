@@ -1,0 +1,15 @@
+PING d2pcb72msibvx3.cloudfront.net (54.192.118.238) 56(84) bytes of data.
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=1 ttl=62 time=0.801 ms
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=2 ttl=62 time=0.958 ms
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=3 ttl=62 time=0.825 ms
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=4 ttl=62 time=0.800 ms
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=5 ttl=62 time=0.866 ms
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=6 ttl=62 time=1.12 ms
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=7 ttl=62 time=0.896 ms
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=8 ttl=62 time=0.773 ms
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=9 ttl=62 time=0.799 ms
+64 bytes from server-54-192-118-238.sfo9.r.cloudfront.net (54.192.118.238): icmp_seq=10 ttl=62 time=0.814 ms
+
+--- d2pcb72msibvx3.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9002ms
+rtt min/avg/max/mdev = 0.773/0.865/1.124/0.106 ms

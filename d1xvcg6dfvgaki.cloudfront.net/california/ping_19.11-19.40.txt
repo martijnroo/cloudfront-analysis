@@ -1,0 +1,15 @@
+PING d1xvcg6dfvgaki.cloudfront.net (54.239.132.26) 56(84) bytes of data.
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=1 ttl=62 time=0.706 ms
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=2 ttl=62 time=0.805 ms
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=3 ttl=62 time=5.95 ms
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=4 ttl=62 time=1.48 ms
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=5 ttl=62 time=0.433 ms
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=6 ttl=62 time=0.754 ms
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=7 ttl=62 time=0.750 ms
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=8 ttl=62 time=1.25 ms
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=9 ttl=62 time=0.748 ms
+64 bytes from server-54-239-132-26.sfo9.r.cloudfront.net (54.239.132.26): icmp_seq=10 ttl=62 time=0.626 ms
+
+--- d1xvcg6dfvgaki.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9003ms
+rtt min/avg/max/mdev = 0.433/1.351/5.953/1.561 ms

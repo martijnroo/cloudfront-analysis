@@ -1,0 +1,15 @@
+PING d3m1c4hwkgedal.cloudfront.net (205.251.215.126) 56(84) bytes of data.
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=1 ttl=60 time=3.24 ms
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=2 ttl=60 time=2.22 ms
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=3 ttl=60 time=2.18 ms
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=4 ttl=60 time=2.43 ms
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=5 ttl=60 time=2.32 ms
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=6 ttl=60 time=12.0 ms
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=7 ttl=60 time=2.12 ms
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=8 ttl=60 time=2.30 ms
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=9 ttl=60 time=2.57 ms
+64 bytes from server-205-251-215-126.sfo5.r.cloudfront.net (205.251.215.126): icmp_seq=10 ttl=60 time=2.24 ms
+
+--- d3m1c4hwkgedal.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9013ms
+rtt min/avg/max/mdev = 2.129/3.374/12.085/2.920 ms

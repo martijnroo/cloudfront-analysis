@@ -1,0 +1,4 @@
+[Measurement for 10kb at 01:41:12 20.41.2014] 
+Tshark:
+
+  1   0.000000 172.31.8.238 -> 172.31.0.2   DNS 89 Standard query 0x1196  A d1xvcg6dfvgaki.cloudfront.net

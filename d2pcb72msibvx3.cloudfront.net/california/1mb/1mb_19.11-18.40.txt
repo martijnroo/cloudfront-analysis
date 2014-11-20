@@ -1,0 +1,18 @@
+[Measurement for 1mb at 18:45:19 19.45.2014] 
+Tshark:
+
+  1   0.000000 85.76.134.238 -> 172.31.8.238 SSH 102 Encrypted request packet len=48
+  2   0.000160 172.31.8.238 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  3   0.199989 85.76.134.238 -> 172.31.8.238 SSH 102 Encrypted request packet len=48
+  4   0.210534 172.31.8.238 -> 85.76.134.238 SSH 102 Encrypted response packet len=48
+  5   0.377526 172.31.8.238 -> 172.31.0.2   DNS 89 Standard query 0x161b  A d2pcb72msibvx3.cloudfront.net
+  6   0.377574 172.31.8.238 -> 172.31.0.2   DNS 89 Standard query 0xd849  AAAA d2pcb72msibvx3.cloudfront.net
+  7   0.378114   172.31.0.2 -> 172.31.8.238 DNS 217 Standard query response 0x161b  A 54.230.118.136 A 54.230.119.40 A 54.230.119.91 A 54.192.118.228 A 54.230.116.72 A 54.230.116.136 A 54.230.117.5 A 54.230.117.21
+  8   0.378126   172.31.0.2 -> 172.31.8.238 DNS 169 Standard query response 0xd849 
+  9   0.381292 172.31.8.238 -> 54.230.118.136 TCP 74 43043 > http [SYN] Seq=0 Win=26883 Len=0 MSS=8961 SACK_PERM=1 TSval=1586866 TSecr=0 WS=128
+ 10   0.382004 54.230.118.136 -> 172.31.8.238 TCP 74 http > 43043 [SYN, ACK] Seq=0 Ack=1 Win=14480 Len=0 MSS=1460 SACK_PERM=1 TSval=1681811190 TSecr=1586866 WS=128
+ 11   0.382019 172.31.8.238 -> 54.230.118.136 TCP 66 43043 > http [ACK] Seq=1 Ack=1 Win=27008 Len=0 TSval=1586866 TSecr=1681811190
+ 12   0.382058 172.31.8.238 -> 54.230.118.136 HTTP 162 GET /1mb HTTP/1.1 
+ 13   0.382707 54.230.118.136 -> 172.31.8.238 TCP 66 http > 43043 [ACK] Seq=1 Ack=97 Win=14592 Len=0 TSval=1681811190 TSecr=1586866
+ 14   0.460319 85.76.134.238 -> 172.31.8.238 TCP 54 29664 > ssh [ACK] Seq=97 Ack=49 Win=256 Len=0
+ 15   0.653391 54.230.118.136 -> 172.31.8.238 TCP 7306 [TCP segment of a reassembled PDU]

@@ -1,0 +1,15 @@
+PING d1xzxs93r3iphc.cloudfront.net (54.192.141.192) 56(84) bytes of data.
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=1 ttl=60 time=2.06 ms
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=2 ttl=60 time=2.58 ms
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=3 ttl=60 time=2.24 ms
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=4 ttl=60 time=2.44 ms
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=5 ttl=60 time=2.27 ms
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=6 ttl=60 time=2.14 ms
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=7 ttl=60 time=2.26 ms
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=8 ttl=60 time=2.19 ms
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=9 ttl=60 time=2.51 ms
+64 bytes from server-54-192-141-192.sfo5.r.cloudfront.net (54.192.141.192): icmp_seq=10 ttl=60 time=2.07 ms
+
+--- d1xzxs93r3iphc.cloudfront.net ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9014ms
+rtt min/avg/max/mdev = 2.068/2.281/2.582/0.176 ms

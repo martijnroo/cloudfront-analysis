@@ -1,0 +1,4 @@
+[Measurement for 1kb at 23:42:36 19.42.2014] 
+Tshark:
+
+  1   0.000000 172.31.8.238 -> 172.31.0.2   DNS 88 Standard query 0x97be  A dm53kc3eax57k.cloudfront.net
