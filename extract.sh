@@ -4,15 +4,15 @@ function convert_url {
 	url=$1
 
 	case $url in
-		"d17xdwadnyh5jz") echo "saopaulo" && return;;
-		"d2j3h070v7ssnq") echo "usstandard" && return;;
-		"d1mwrzpabofbyf") echo "singapore" && return;;
-		"d1hrt2aivb7twc") echo "oregon" && return;;
-		"d2btk8vfxgin4t") echo "ireland" && return;;
-		"d34jimtkchmonz") echo "frankfurt" && return;;
-		"d3o5detyrtwvn1") echo "california" && return;;
-		"d1eenfr2uwy1l3") echo "tokyo" && return;;
-		"dxuf2hxmfmw7z") echo "sydney" && return;;
+		"d39wppo36gwqpx") echo "saopaulo" && return;;
+		"d3796nkzln59xv") echo "usstandard" && return;;
+		"d1xvcg6dfvgaki") echo "singapore" && return;;
+		"d1dx94olpiqj0t") echo "oregon" && return;;
+		"d1xzxs93r3iphc") echo "ireland" && return;;
+		"dm53kc3eax57k") echo "frankfurt" && return;;
+		"d1n0gskdvzj94j") echo "california" && return;;
+		"d3m1c4hwkgedal") echo "tokyo" && return;;
+		"d2pcb72msibvx3") echo "sydney" && return;;
 		*) echo "n/a";;
 	esac
 }
