@@ -17,7 +17,7 @@ function convert_url {
 	esac
 }
 
-echo "id,datetime,S3 location,measuring location,network latency,1kb (retrieval latency),10kb,100kb,1mb,10mb"
+echo "id,datetime,S3 location,measuring location,IP address,network latency,1kb (retrieval latency),10kb,100kb,1mb,10mb"
 
 id=0
 for dist in *.cloudfront.net
@@ -41,10 +41,12 @@ do
 				tshark_file="$site/$size/${size}_${datetime}.txt"
 				req_time=$(cat $tshark_file | grep -e "HTTP\s[0-9]*\sGET\s/\(1kb\|10kb\|100kb\|1mb\|10mb\)" | awk '{print $2}')
 				res_time=$(cat $tshark_file | grep -A 10 -e "HTTP\s[0-9]*\sGET\s/\(1kb\|10kb\|100kb\|1mb\|10mb\)" | grep ACK | head -n 1 | awk '{print $2}')
+				ip=$(cat $tshark_file | grep -A 10 -e "HTTP\s[0-9]*\sGET\s/\(1kb\|10kb\|100kb\|1mb\|10mb\)" | grep ACK | head -n 1 | awk '{print $3}')
+
 				diffs+="$(echo "$res_time - $req_time" | bc),"
 			done
 
-			echo "$id,$datetime,$dist_name,$site_name,$avg,$diffs"
+			echo "$id,$datetime,$dist_name,$site_name,$ip,$avg,$diffs"
 			((id++))
 		done
 	done
