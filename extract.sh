@@ -17,16 +17,15 @@ function convert_url {
 	esac
 }
 
-echo "id,datetime,S3 location,measuring location,IP address,network latency,1kb (retrieval latency),10kb,100kb,1mb,10mb"
+echo "measuring location,id,datetime,S3 location,IP address,network latency,1kb (retrieval latency),10kb,100kb,1mb,10mb"
 
-id=0
-for dist in *.cloudfront.net
+for site in home california ireland singapore
 do
-	dist_name=$(convert_url $(echo $dist | cut -d'.' -f 1))
-	for site in $dist/*
+	id=0
+	for dist in *.cloudfront.net
 	do
-		site_name=$(echo $site | cut -d'/' -f 2)
-		for file in $site/ping*
+		dist_name=$(convert_url $(echo $dist | cut -d'.' -f 1))
+		for file in $dist/$site/ping*
 		do
 			datetime=$(echo $file | cut -d'/' -f 3 | cut -d'_' -f 2 | cut -d'.' -f 1-3)
 			avg=$(cat $file | grep Average | awk '{print $9}' | cut -c1-2)
@@ -38,7 +37,7 @@ do
 			diffs=""
 			for size in 1kb 10kb 100kb 1mb 10mb
 			do
-				tshark_file="$site/$size/${size}_${datetime}.txt"
+				tshark_file="$dist/$site/$size/${size}_${datetime}.txt"
 				req_time=$(cat $tshark_file | grep -e "HTTP\s[0-9]*\sGET\s/\(1kb\|10kb\|100kb\|1mb\|10mb\)" | awk '{print $2}')
 				res_time=$(cat $tshark_file | grep -A 10 -e "HTTP\s[0-9]*\sGET\s/\(1kb\|10kb\|100kb\|1mb\|10mb\)" | grep ACK | head -n 1 | awk '{print $2}')
 				ip=$(cat $tshark_file | grep -A 10 -e "HTTP\s[0-9]*\sGET\s/\(1kb\|10kb\|100kb\|1mb\|10mb\)" | grep ACK | head -n 1 | awk '{print $3}')
@@ -46,9 +45,8 @@ do
 				diffs+="$(echo "$res_time - $req_time" | bc),"
 			done
 
-			echo "$id,$datetime,$dist_name,$site_name,$ip,$avg,$diffs"
+			echo "$site,$id,$datetime,$dist_name,$ip,$avg,$diffs"
 			((id++))
 		done
 	done
 done
-
