@@ -73,7 +73,7 @@
 \usepackage{hyperref}
 \usepackage{footnote}
 \usepackage{listings}
-
+\usepackage{dirtree}
 
 \begin{document}
 %
@@ -112,10 +112,56 @@ The goal of this experimentation was to examine the latencies with Amazon Cloudf
 To setup the required cloud services, an account was created to Amazon AWS. Next we created an Amazon S3 bucket for each available location: US East, US West (Oregon), US West (California), Ireland, Frankfurt, Singapore, Sydney, Tokyo, and Sao Paulo. The S3 buckets functioned as storages for the files to be downloaded via CDN. Then, for each of those buckets, we created a Cloudfront download distribution. Thus, all CDN download distributions had their own file origin. All download distributions were set to use only HTTP and to be available at all edge locations around the world. Finally, five different-sized files were uploaded to each S3 bucket. The sizes were 1KB, 10KB, 100KB, 1MB, and 10MB.
 
 \section{Measurement}
-asadasd
+asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd asadasd asdasdasdasd dasdasdasd dasdasdasd dasd dasdasdasd
 
+This results in a file structure as follows:\\
+\dirtree{%
+.1 d2dx94olpiqj0t.cloudfront.net.
+.2 california.
+.3 1kb.
+.4 1kb\_19.11-17.40.txt.
+.4 1kb\_19.11-18.40.txt.
+.4 ....
+.3 10kb.
+.3 100kb.
+.3 1mb.
+.3 10mb.
+.3 1kb.
+.3 ping\_19.11-17.40.txt.
+.3 ping\_19.11-18.40.txt.
+.3 ....
+.2 home.
+.3 ....
+.2 ireland.
+.3 ....
+.2 singapore.
+.3 ....
+.1 d3kjdkfj34jfd.cloudfront.net.
+.2 ....
+.1 ....
+}
+
+To extract interesting infromation from the data, a Bash script was created. It loops over all the files and builds up a CSV file, exemplified in Table \ref{table:extracteddata}.
+
+\begin{table*}
+\renewcommand{\arraystretch}{1.3}
+\caption{Extracted data}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\bfseries Measuring location & \bfseries id & \bfseries Datetime & \bfseries S3 location & \bfseries IP address & \bfseries Network latency & \bfseries 1KB (retr. latency) & \bfseries 10kb & \bfseries 100kb & \bfseries 1mb & \bfseries 10mb \\
+\hline\hline
+home & 0 & 16.11-14.00 & oregon & 54.230.99.246 & 34 & .031158 & .028388 & .028209 & .026788 & .037260 \\
+\hline
+home & 1 & 16.11-15.00 & oregon & 54.230.98.223 & 41 & .035771 & .035264 & .029972 & .035058 & .027095 \\
+\hline
+... & ... & ... & ... & ... & ... & ... & ... & ... & ... & ... \\
+\hline
+\end{tabular}
+\label{table:extracteddata}
+\end{table*}
 \section{Results}
-asdsaddas
+asdasdsaddsa
 
 \section{Analysis}
 asdasdsaddsa
