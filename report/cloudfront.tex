@@ -112,9 +112,9 @@ The goal of this experimentation was to examine the latencies with Amazon Cloudf
 To setup the required cloud services, an account was created to Amazon AWS. Next we created an Amazon S3 bucket for each available location: US East, US West (Oregon), US West (California), Ireland, Frankfurt, Singapore, Sydney, Tokyo, and Sao Paulo. The S3 buckets functioned as storages for the files to be downloaded via CDN. Then, for each of those buckets, we created a Cloudfront download distribution. Thus, all CDN download distributions had their own file origin. All download distributions were set to use only HTTP and to be available at all edge locations around the world. Finally, five different-sized files were uploaded to each S3 bucket. The sizes were 1KB, 10KB, 100KB, 1MB, and 10MB.
 
 \section{Measurement}
-asdasdasd asdasdads
+asdasdasd asdasdads asdasdasd asdasdads asdasdasd asdasdads asdasdasd asdasdads asdasdasd asdasdadsasdasdasd asdasdads
 
-Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. To automate things, we wrote a Bash script that performs the measurements and ran it as a cron job. About hourly, the script pings all the Cloudfront distributions and downloads all the files, taking tshark log at the same time, and puts the outputs to files. After running this from each measuring location, we ended up having a file structure as follows:\\
+Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. To automate things, we wrote a Bash script that performs the measurements and ran it as a cron job. About hourly, the script pings 10 times all the Cloudfront distributions and downloads all the files, taking tshark log at the same time, and puts the outputs to files. After running this from each measuring location, we ended up having a file structure as follows:\\
 
 \dirtree{%
 .1 d2dx94olpiqj0t.cloudfront.net.
@@ -142,7 +142,7 @@ Since we had 9 different S3 locations, 5 different file sizes, about 20 differen
 .1 ....
 }
 
-To extract interesting information from the data, a Bash script was created. It loops over all the files and builds up a CSV file containing columns shown in Table \ref{table:extracteddata}.
+To extract interesting information from the data, a Bash script was created. It loops over all the files and builds up a CSV file containing columns shown in Table \ref{table:extracteddata}. The IP addresses are taken from the first HTTP response packet in tshark logs of the 10mb download. The network latencies are averages of the 10 pings. Retrieval latencies are taken from tshark logs - they are the durations between the first HTTP GET requests and the first HTTP response packets.
 
 \begin{table*}
 \renewcommand{\arraystretch}{1.3}
