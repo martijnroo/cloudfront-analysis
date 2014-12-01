@@ -79,7 +79,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Experimentation with the Amazon CloudFront service}
+\title{File Propagation Through Amazon CloudFront}
 
 
 % author names and affiliations
@@ -104,20 +104,21 @@ Email: martijn.roo@aalto.fi}}
 
 
 \section{Introduction}
-Amazon Cloudfront is service that provides a content delivery network (CDN). CDN is a geographically wide network of computer nodes that makes it possible to distribute content to end users with low latency and high data transfer speeds. As of Novemeber 2014, Amazon Cloudfront had edge locations in all continents except Africa and Antarctica. Most of them reside in USA, Europe and Asia. \cite{cloudfront_product_details}
+Amazon CloudFront is service that provides a content delivery network (CDN). A CDN is a geographically wide network of computer nodes that makes it possible to distribute content to end users with low latency and high data transfer speeds. As of November 2014, Amazon CloudFront has edge locations in all continents except Africa and Antarctica. Most of them reside in USA, Europe and Asia \cite{CloudFront_product_details}.
 
-The goal of this experimentation was to examine the latencies with Amazon Cloudfront download distribution feature from different locations in different times. In addition to network latency, we measured also retrieval latency, which is the starting time of a download session. Retrieval latency must not be confused with the total downloading time.
+This research aims to achieve a better understanding of how files propagate within Amazon CloudFront after a CloudFront distribution is created.  Multiple files of different sizes are made available through Amazon CloudFront and for these files the network latency and retrieval latency for were measured from different, geographically spread-out locations at multiple times after initiating the CloudFront distribution. Here, the retrieval latency is the time from the first HTTP GET request until the first response packet that contains data.
 
-\section{Experimentation setup}
-To setup the required cloud services, an account was created to Amazon AWS. Next we created an Amazon S3 bucket for each available location: US East, US West (Oregon), US West (California), Ireland, Frankfurt, Singapore, Sydney, Tokyo, and Sao Paulo. The S3 buckets functioned as storages for the files to be downloaded via CDN. Then, for each of those buckets, we created a Cloudfront download distribution. Thus, all CDN download distributions had their own file origin. All download distributions were set to use only HTTP and to be available at all edge locations around the world. Finally, five different-sized files were uploaded to each S3 bucket. The sizes were 1KB, 10KB, 100KB, 1MB, and 10MB.
+\section{Experiment setup}
+To setup the required cloud services, Amazon S3 buckets were created for each available location: US East, US West (Oregon), US West (California), Ireland, Frankfurt, Singapore, Sydney, Tokyo, and Sao Paulo. The S3 buckets functioned as storages for the files to be downloaded via CloudFront. Then, for each of those buckets, we created a CloudFront download distribution. Thus, all CDN download distributions had their own S3 origin in the same region. All download distributions were set to use only HTTP and to be available at all edge locations. Finally, five different-sized files were uploaded to each S3 bucket. The sizes were 1KB, 10KB, 100KB, 1MB, and 10MB. These files were made using rdfc, a Windows utility to make random binary data files of specific sizes.
 
-\section{Measurement}
-asdasdasd asdasdads asdasdasd asdasdads asdasdasd asdasdads asdasdasd asdasdads asdasdasd asdasdadsasdasdasd asdasdads
+\section{Measurements}
+To capture how files of different sizes propagate through Amazon's CloudFront CDN network, we measured the network latency to the different CloudFront servers as well as the retrieval latency for each of the files at intervals of one hour starting after initializing the CloudFront distributions and continuing for approximately twenty measurements. These measurements were made from a home computer and from Amazon EC2 instances in California, Ireland and Singapore.
 
-Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. To automate things, we wrote a Bash script that performs the measurements and ran it as a cron job. About hourly, the script pings 10 times all the Cloudfront distributions and downloads all the files, taking tshark log at the same time, and puts the outputs to files. After running this from each measuring location, we ended up having a file structure as follows:\\
+
+Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. To automate things, we wrote a Bash script that performs the measurements and ran it as a cron job. About hourly, the script pings 10 times all the CloudFront distributions and downloads all the files, taking tshark log at the same time, and puts the outputs to files. After running this from each measuring location, we ended up having a file structure as follows:\\
 
 \dirtree{%
-.1 d2dx94olpiqj0t.cloudfront.net.
+.1 d2dx94olpiqj0t.CloudFront.net.
 .2 california.
 .3 1kb.
 .4 1kb\_19.11-17.40.txt.
@@ -137,7 +138,7 @@ Since we had 9 different S3 locations, 5 different file sizes, about 20 differen
 .3 ....
 .2 singapore.
 .3 ....
-.1 d3kjdkfj34jfd.cloudfront.net.
+.1 d3kjdkfj34jfd.CloudFront.net.
 .2 ....
 .1 ....
 }
