@@ -164,7 +164,9 @@ home & 1 & 16.11-15.00 & oregon & 54.230.98.223 & 41 & .035771 & .035264 & .0299
 \end{table*}
 
 \section{Results}
-Network latencies were visualized in Figure \autoref{fig:pings}. For every measurement location, three download distribution from different continents were used: California, Ireland, and Tokyo. From home, network latency, with a couple exceptions, is 40-50 milliseconds. The network latencies measured from EC2s in California and Singapore are really small. Against all distributions, California's latencies are mainly less then one milliseconds and Singapore's vary mostly between 0.6 and 1.6 milliseconds. From Ireland EC2, however, network latencies keep fluctuating from ~1.5 milliseconds to ~85 milliseconds, back and forth. 
+Network latencies were visualized in \autoref{fig:pings}. For every measurement location, three download distribution from different continents were used: California, Ireland, and Tokyo. From home, network latency, with a couple exceptions, is 40-50 milliseconds. The network latencies measured from EC2s in California and Singapore are really small. Against all distributions, California's latencies are mainly less then one milliseconds and Singapore's vary mostly between 0.6 and 1.6 milliseconds. From Ireland EC2, however, network latencies keep fluctuating from ~1.5 milliseconds to ~85 milliseconds, back and forth.\\
+
+Retrieval latencies are quite different if compared between measurement locations. They are, however, quite same when comparing against different download distributions from certain measurement location (See \autoref{fig:retrievals_california}, \autoref{fig:retrievals_ireland}, \autoref{fig:retrievals_tokyo}. From home, retrieval latencies fluctuate around 30 milliseconds, regardless of download distribution. From California and Singapore, retrieval latencies are mostly less than one millisecond (See \autoref{fig:retrievals_ireland_subset}, for example). Ireland, in turn, has quite interesting retrieval times. They seem to follow a zigzag pattern to some extend. Against download distribution in Ireland itself, the retrieval times frequently jump to ~90 milliseconds for two successive measurements, and then drop back to about one millisecond for some hours (measurements).
 
 \begin{figure*}[h]
     \centering
@@ -196,8 +198,6 @@ Network latencies were visualized in Figure \autoref{fig:pings}. For every measu
     \caption[]{Latency using California S3, Ireland S3 and Tokyo S3 (ms))}
     \label{fig:pings}
 \end{figure*}
-
-asdasdsaddsa
 
 \section{Analysis}
 asdasdsaddsa
