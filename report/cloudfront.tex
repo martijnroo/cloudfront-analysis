@@ -164,6 +164,8 @@ home & 1 & 16.11-15.00 & oregon & 54.230.98.223 & 41 & .035771 & .035264 & .0299
 \end{table*}
 
 \section{Results}
+
+\subsection{Network latency∫}
 Relative changes in network latencies are visualized in \autoref{fig:ping_relative}. For every measurement location, three download distribution from different continents were used: California, Ireland, and Tokyo. The network latencies measured from California decreased 70\% after the first measurement on average. Then they stayed quite constant. Network latency from California EC2 to California download distribution, however, kept being about 30\% more than latency to outside California after the first measurement, which is quite interesting.
 
 The network latencies from the home laptop (Finland) to Ireland and Tokyo increased by 28\% on average. From home to California, however, latencies increased about 250\%, dropping back momentarily now and then.
@@ -172,10 +174,10 @@ From Singapore, the network latencies kept quite randomly fluctuating between th
 
 From Ireland EC2, network latencies to all three download distributions kept fluctuating from ~1.5 milliseconds to ~85 milliseconds, back and forth. The relative latencies from Ireland to Ireland and Tokyo were so huge that they were left out from the figure to make other latencies differentiate better.\\
 
-\subsection{Retrieval latencies}
-Figures \ref{fig:california_relative}, \ref{fig:ireland_relative} and \ref{fig:tokyo_relative} show the retrieval latencies measured for the different file sizes from the four measurement locations to the California, Ireland and Tokyo CloudFront distributions respectively. The figures show the retrieval latency over a twenty-hour timespan. Since we are mostly interested in the relative change of the retrieval latency over time, the latency is depicted as a percentage of the initial measurement per file and measurement location.
+\subsection{Retrieval latency}
+Figures \ref{fig:california_relative}, \ref{fig:ireland_relative} and \ref{fig:tokyo_relative} show the retrieval latencies measured for the different file sizes from the four measurement locations to the California, Ireland and Tokyo CloudFront distributions respectively. The figures show the retrieval latency over a twenty-hour timespan. Since we are mostly interested in the relative change of the retrieval latency over time, the latency is depicted as a percentage of the initial measurement per file and measurement location. Due to space limitations, the retrieval latencies for the six other CloudFront distributions are not shown here. They are however similar to the shown graphs. %TODO: state where the missing data can be retrieved from??
 
-The figures show that the retrieval latency for different files with the same source and destination often show the same trend. The biggest exceptions to this observation are the retrieval latency for the 10 MB file from California to Singapore and for the 1 MB file retrieved from Ireland to Singapore, since those values are continuously significantly higher than that for other files retrieved in Singapore from those destinations.
+The figures show that the retrieval latency for different files with the same source and destination often show the same trend. The biggest exceptions to this observation are the retrieval latency for the 10 MB file from California to Singapore and for the 1 MB file retrieved from Ireland or Tokyo to Singapore, since those values are continuously significantly higher than that for other files retrieved in Singapore from those destinations.
 
 Another observation is that Ireland's values seem to be either around 100\% or close to 0\% for the California distribution. For the other distributions, Ireland's values have been excluded from the graphs because they fluctuated far more than the other measurements (by a factor of eighty instead of a factor of about four).
 
@@ -212,8 +214,21 @@ A last observation is that the graphs in all three figures do not show a trend f
 \end{figure*}
 
 \section{Analysis}
+
+\subsection{Network latency}
 Network latencies should not change because of file propagation since the request goes always to the same host and responses directly regardless of cached files. So what then causes the changes in the network latencies? One reason is that the level of congestion between hosts simply varies. This is, however, not enough to explain the huge changes in case of Ireland, for example. How could the latency always increase to nearly exactly the same level? We were not able to answer to this question. Another open question is that why is the network latency from California EC2 to California cloudfront distribution constantly higher than to Ireland and Tokyo?
 
+
+
+
+\subsection{Retrieval latency}
+It takes time for files to propagate through the Amazon CloudFront CDN network to all edge-location servers. We would therefore expect the retrieval latency to decrease with time as CDN servers nearer to the requesting node become populated with the requested files. However, as seen in the results section, this does not show in our measurements. Our measurements show continuous fluctuations of the retrieval latency during the twenty-hour measurement interval.
+
+CloudFront could differentiate between files of different sizes by prioritizing the distribution of small files since they occupy less network bandwidth. It could also prioritize larger files because the download speed-up gained with a smaller network latency is much greater with larger files than with smaller files. It would therefore be possible to see structural differences between the retrieval times of files of different sizes. Our measurement data does not show such structural differences however. As stated before, retrievel latencies for different file sizes fluctuate with a similar order of magnitude, given the same measurement location and CloudFront distribution. The exception here is files retrieved from Singapore of either 1 MB (from Ireland or Tokyo) or 10 MB (from California). The retrieval times for these files seem to assume relative latencies significantly higher than the other files retrieved from the same distributions in Singapore. However, from this exception we cannot directly form a general rule.∫
+
+
+
+Link network latency
 
 
 
