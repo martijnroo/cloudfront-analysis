@@ -112,7 +112,7 @@ This research aims to achieve a better understanding of how files propagate with
 To setup the required cloud services, Amazon S3 buckets were created for each available location: US East, US West (Oregon), US West (California), Ireland, Frankfurt, Singapore, Sydney, Tokyo, and Sao Paulo. The S3 buckets functioned as storages for the files to be downloaded via CloudFront. Then, for each of those buckets, we created a CloudFront download distribution. Thus, all CDN download distributions had their own S3 origin in the same region. All download distributions were set to use only HTTP and to be available at all edge locations. Finally, five different-sized files were uploaded to each S3 bucket. The sizes were 1KB, 10KB, 100KB, 1MB, and 10MB. These files were made using rdfc, a Windows utility to make random binary data files of specific sizes.
 
 \section{Measurements}
-To capture how files of different sizes propagate through Amazon's CloudFront CDN network, we measured the network latency to the different CloudFront servers as well as the retrieval latency for each of the files at intervals of one hour starting after initializing the CloudFront distributions and continuing for approximately twenty measurements. These measurements were made from a home computer and from Amazon EC2 instances in California, Ireland and Singapore.
+To capture how files of different sizes propagate through Amazon's CloudFront CDN network, we measured the network latency to the different CloudFront servers as well as the retrieval latency for each of the files at intervals of one hour starting after initializing the CloudFront distributions and continuing for approximately twenty measurements. These measurements were made from a home computer (located in Finland) and from Amazon EC2 instances in California, Ireland and Singapore.
 
 
 Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. To automate things, we wrote a Bash script that performs the measurements and ran it as a cron job. About hourly, the script pings 10 times all the CloudFront distributions and downloads all the files, taking tshark log at the same time, and puts the outputs to files. After running this from each measuring location, we ended up having a file structure as follows:\\
@@ -164,38 +164,40 @@ home & 1 & 16.11-15.00 & oregon & 54.230.98.223 & 41 & .035771 & .035264 & .0299
 \end{table*}
 
 \section{Results}
+Network latencies were visualized in \autoref{fig:pings}. For every measurement location, three download distribution from different continents were used: California, Ireland, and Tokyo. From home, network latency, with a couple exceptions, is 40-50 milliseconds. The network latencies measured from EC2s in California and Singapore are really small. Against all distributions, California's latencies are mainly less then one milliseconds and Singapore's vary mostly between 0.6 and 1.6 milliseconds. From Ireland EC2, however, network latencies keep fluctuating from ~1.5 milliseconds to ~85 milliseconds, back and forth.\\
+
+Retrieval latencies are quite different if compared between measurement locations. They are, however, quite same when comparing against different download distributions from certain measurement location (See \autoref{fig:retrievals_california}, \autoref{fig:retrievals_ireland}, \autoref{fig:retrievals_tokyo}. From home, retrieval latencies fluctuate around 30 milliseconds, regardless of download distribution. From California and Singapore, retrieval latencies are mostly less than one millisecond (See \autoref{fig:retrievals_ireland_subset}, for example). Ireland, in turn, has quite interesting retrieval times. They seem to follow a zigzag pattern to some extend. Against download distribution in Ireland itself, the retrieval times frequently jump to ~90 milliseconds for two successive measurements, and then drop back to about one millisecond for some hours (measurements).
+
 \begin{figure*}[h]
     \centering
     \includegraphics[width=7in]{images/retrievals_california.png}
     \caption[]{Retrieval times using S3 in California (s)}
-    \label{fig:architecture}
+    \label{fig:retrievals_california}
 \end{figure*}
 \begin{figure*}[h]
     \centering
     \includegraphics[width=7in]{images/retrievals_ireland.png}
     \caption[]{Retrieval times using S3 in Ireland (s)}
-    \label{fig:architecture}
+    \label{fig:retrievals_ireland}
 \end{figure*}
 \begin{figure*}[h]
     \centering
     \includegraphics[width=7in]{images/retrievals_tokyo.png}
     \caption[]{Retrieval times using S3 in Tokyo (s)}
-    \label{fig:architecture}
+    \label{fig:retrievals_tokyo}
 \end{figure*}
 \begin{figure*}[h]
     \centering
     \includegraphics[width=7in]{images/retrievals_ireland_subset.png}
     \caption[]{Retrieval times using S3 in Ireland (from California and Singapore only) (ms)}
-    \label{fig:architecture}
+    \label{fig:retrievals_ireland_subset}
 \end{figure*}
 \begin{figure*}[h]
     \centering
     \includegraphics[width=5in]{images/pings.png}
     \caption[]{Latency using California S3, Ireland S3 and Tokyo S3 (ms))}
-    \label{fig:architecture}
+    \label{fig:pings}
 \end{figure*}
-
-asdasdsaddsa
 
 \section{Analysis}
 asdasdsaddsa
