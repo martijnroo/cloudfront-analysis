@@ -166,7 +166,7 @@ home & 1 & 16.11-15.00 & oregon & 54.230.98.223 & 41 & .035771 & .035264 & .0299
 \section{Results}
 Relative changes in network latencies are visualized in \autoref{fig:ping_relative}. For every measurement location, three download distribution from different continents were used: California, Ireland, and Tokyo. The network latencies measured from California decreased 70\% after the first measurement on average. Then they stayed quite constant. Network latency from California EC2 to California download distribution, however, kept being about 30\% more than latency to outside California after the first measurement, which is quite interesting.
 
-The network latencies from home laptop (Finland) to Ireland and Tokyo increased by 28\% on average. From home to California, however, latencies increased about 250\%, dropping back momentarily now and then.
+The network latencies from the home laptop (Finland) to Ireland and Tokyo increased by 28\% on average. From home to California, however, latencies increased about 250\%, dropping back momentarily now and then.
 
 From Singapore, the network latencies kept quite randomly fluctuating between the initial value and the double of it.
 
@@ -193,12 +193,12 @@ From Ireland EC2, network latencies to all three download distributions kept flu
 \begin{figure*}[h]
     \centering
     \includegraphics[width=7in]{images/pings_relative.png}
-    \caption[]{Network latencies}
+    \caption[]{Relative changes in network latencies}
     \label{fig:ping_relative}
 \end{figure*}
 
 \section{Analysis}
-
+Network latencies should not change because of file propagation since the request goes always to the same host and responses directly regardless of cached files. So what then causes the changes in the network latencies? One reason is that the level of congestion between hosts simply varies. This is, however, not enough to explain the huge changes in case of Ireland, for example. How could the latency always increase to nearly exactly the same level? We were not able to answer to this question. Another open question is that why is the network latency from California EC2 to California cloudfront distribution constantly higher than to Ireland and Tokyo?
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
