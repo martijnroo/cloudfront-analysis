@@ -164,9 +164,13 @@ home & 1 & 16.11-15.00 & oregon & 54.230.98.223 & 41 & .035771 & .035264 & .0299
 \end{table*}
 
 \section{Results}
-Network latencies were visualized in \autoref{fig:pings}. For every measurement location, three download distribution from different continents were used: California, Ireland, and Tokyo. From home, network latency, with a couple exceptions, is 40-50 milliseconds. The network latencies measured from EC2s in California and Singapore are really small. Against all distributions, California's latencies are mainly less then one milliseconds and Singapore's vary mostly between 0.6 and 1.6 milliseconds. From Ireland EC2, however, network latencies keep fluctuating from ~1.5 milliseconds to ~85 milliseconds, back and forth.\\
+Relative changes in network latencies are visualized in \autoref{fig:ping_relative}. For every measurement location, three download distribution from different continents were used: California, Ireland, and Tokyo. The network latencies measured from California decreased 70\% after the first measurement on average. Then they stayed quite constant. Network latency from California EC2 to California download distribution, however, kept being about 30\% more than latency to outside California after the first measurement, which is quite interesting.
 
-Retrieval latencies are quite different if compared between measurement locations. They are, however, quite same when comparing against different download distributions from certain measurement location (See \autoref{fig:retrievals_california}, \autoref{fig:retrievals_ireland}, \autoref{fig:retrievals_tokyo}. From home, retrieval latencies fluctuate around 30 milliseconds, regardless of download distribution. From California and Singapore, retrieval latencies are mostly less than one millisecond (See \autoref{fig:retrievals_ireland_subset}, for example). Ireland, in turn, has quite interesting retrieval times. They seem to follow a zigzag pattern to some extend. Against download distribution in Ireland itself, the retrieval times frequently jump to ~90 milliseconds for two successive measurements, and then drop back to about one millisecond for some hours (measurements).
+The network latencies from home laptop (Finland) to Ireland and Tokyo increased by 28\% on average. From home to California, however, latencies increased about 250\%, dropping back momentarily now and then.
+
+From Singapore, the network latencies kept quite randomly fluctuating between the initial value and the double of it.
+
+From Ireland EC2, network latencies to all three download distributions kept fluctuating from ~1.5 milliseconds to ~85 milliseconds, back and forth.\\
 
 \begin{figure*}[h]
     \centering
