@@ -325,7 +325,9 @@ Link network latency
 
 
 \section{Conclusion}
+Our goal was to examine the file propagation in Amazon CloudFront. However, with our measurements, we really cannot say much about it. We were not able to see significant decreases in retrieaval times. Instead, we observed correlation between network latencies and retrieval latencies, for example. Moreover, we spotted interesting differences between EC2 instances. It was expected that retrieval times from the home laptop differ from the corresponging ones of EC2s but what we did not expect was the differences in latency profiles of EC2 machines. Ireland's zigzag patterns, for example, were quite unexpected. 
 
+For future work, it would be interesting to research more the patterns and fluctuations of latencies, measure latencies with much larger files or measure download speeds with and without use of CloudFront from different locations.
 
 % conference papers do not normally have an appendix
 
