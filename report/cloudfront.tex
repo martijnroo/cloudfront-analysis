@@ -173,8 +173,13 @@ From Singapore, the network latencies kept quite randomly fluctuating between th
 From Ireland EC2, network latencies to all three download distributions kept fluctuating from ~1.5 milliseconds to ~85 milliseconds, back and forth. The relative latencies from Ireland to Ireland and Tokyo were so huge that they were left out from the figure to make other latencies differentiate better.\\
 
 \subsection{Retrieval latencies}
-Figure \ref{fig:california_relative} shows the retrieval latencies measured for the different file sizes from the four measurement locations to the California CloudFront distribution. The figure shows the retrieval latency over a twenty-hour timespan. Since we are mostly insterested in the relative change of the retrieval latency over time, the latency is depicted as a percentage of the initial measurement.
+Figures \ref{fig:california_relative}, \ref{fig:ireland_relative} and \ref{fig:tokyo_relative} show the retrieval latencies measured for the different file sizes from the four measurement locations to the California, Ireland and Tokyo CloudFront distributions respectively. The figures show the retrieval latency over a twenty-hour timespan. Since we are mostly interested in the relative change of the retrieval latency over time, the latency is depicted as a percentage of the initial measurement per file and measurement location.
 
+The figures show that the retrieval latency for different files with the same source and destination often show the same trend. The biggest exceptions to this observation are the retrieval latency for the 10 MB file from California to Singapore and for the 1 MB file retrieved from Ireland to Singapore, since those values are continuously significantly higher than that for other files retrieved in Singapore from those destinations.
+
+Another observation is that Ireland's values seem to be either around 100\% or close to 0\% for the California distribution. For the other distributions, Ireland's values have been excluded from the graphs because they fluctuated far more than the other measurements (by a factor of eighty instead of a factor of about four).
+
+A last observation is that the graphs in all three figures do not show a trend for the latency either going down or up and the measurements also do not seem to fluctuate less over time.
 
 
 
