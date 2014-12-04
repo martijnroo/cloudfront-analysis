@@ -112,10 +112,10 @@ This research aims to achieve a better understanding of how files propagate with
 To setup the required cloud services, Amazon S3 buckets were created for each available location: US East, US West (Oregon), US West (California), Ireland, Frankfurt, Singapore, Sydney, Tokyo, and Sao Paulo. The S3 buckets functioned as storages for the files to be downloaded via CloudFront. Then, for each of those buckets, we created a CloudFront download distribution. Thus, all CDN download distributions had their own S3 origin in the same region. All download distributions were set to use only HTTP and to be available at all edge locations. Finally, five different-sized files were uploaded to each S3 bucket. The sizes were 1KB, 10KB, 100KB, 1MB, and 10MB. These files were made using rdfc, a Windows utility to make random binary data files of specific sizes.
 
 \section{Measurements}
-To capture how files of different sizes propagate through Amazon's CloudFront CDN network, we measured the network latency to the different CloudFront servers as well as the retrieval latency for each of the files at intervals of one hour starting after initializing the CloudFront distributions and continuing for approximately twenty measurements. These measurements were made from a home computer (located in Finland) and from Amazon EC2 instances in California, Ireland and Singapore.
+To capture how files of different sizes propagate through Amazon's CloudFront CDN network, we measured the network latency to the different CloudFront servers as well as the retrieval latency for each of the files at intervals of one hour starting after initializing the CloudFront distributions and continuing for approximately twenty measurements. These measurements were made from a home computer (located in Helsinki, Finland) and from Amazon EC2 instances in California, Ireland and Singapore.
 
 
-Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. To automate things, we wrote a Bash script that performs the measurements and ran it as a cron job. About hourly, the script pings 10 times all the CloudFront distributions and downloads all the files, taking tshark log at the same time, and puts the outputs to files. After running this from each measuring location, we ended up having a file structure as follows:\\
+Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. We used a CRON job to execute a bash script every hour at each of the four measurement locations. This bash script pings all the CloudFront distributions and retrieves the different files from all distributions while making a tshark log. Aggregating all the measurements resulted in the following file structure:\\
 
 \dirtree{%
 .1 d2dx94olpiqj0t.CloudFront.net.
@@ -143,7 +143,7 @@ Since we had 9 different S3 locations, 5 different file sizes, about 20 differen
 .1 ....
 }
 
-To extract interesting information from the data, a Bash script was created. It loops over all the files and builds up a CSV file containing columns shown in Table \ref{table:extracteddata}. The IP addresses are taken from the first HTTP response packet in tshark logs of the 10mb download. The network latencies are averages of the 10 pings. Retrieval latencies are taken from tshark logs - they are the durations between the first HTTP GET requests and the first HTTP response packets.
+Another bash script extracts information from the raw logs created during measurements. This resulted in a CSV file containing columns shown in Table \ref{table:extracteddata}. The IP addresses are taken from the first HTTP response packet in the tshark logs of the 10mb file download. The network latencies are averages of pinging. Retrieval latencies are the durations between the first HTTP GET request and the first HTTP response packet in the tshark logs.
 
 \begin{table*}
 \renewcommand{\arraystretch}{1.3}
@@ -172,22 +172,31 @@ From Singapore, the network latencies kept quite randomly fluctuating between th
 
 From Ireland EC2, network latencies to all three download distributions kept fluctuating from ~1.5 milliseconds to ~85 milliseconds, back and forth. The relative latencies from Ireland to Ireland and Tokyo were so huge that they were left out from the figure to make other latencies differentiate better.\\
 
-\begin{figure*}[h]
+\subsection{Retrieval latencies}
+Figure \ref{fig:california_relative} shows the retrieval latencies measured for the different file sizes from the four measurement locations to the California CloudFront distribution. The figure shows the retrieval latency over a twenty-hour timespan. Since we are mostly insterested in the relative change of the retrieval latency over time, the latency is depicted as a percentage of the initial measurement.
+
+
+
+
+
+\begin{figure*}[]
     \centering
-    \includegraphics[width=7in]{images/california_relative.png}
-    \caption[]{Relative changes in retrieval times using S3 in California}
+    \includegraphics[width=\linewidth]{images/california_relative.png}
+    \caption[]{Relative retrieval times using the California CloudFront distribution}
     \label{fig:california_relative}
 \end{figure*}
+
+
 \begin{figure*}[h]
     \centering
     \includegraphics[width=7in]{images/ireland_relative.png}
-    \caption[]{Relative changes in retrieval times using S3 in Ireland}
+    \caption[]{Relative retrieval times using the Ireland CloudFront distribution}
     \label{fig:ireland_relative}
 \end{figure*}
 \begin{figure*}[h]
     \centering
     \includegraphics[width=7in]{images/tokyo_relative.png}
-    \caption[]{Relative changes in retrieval times using S3 in Tokyo}
+    \caption[]{Relative retrieval times using the Tokyo CloudFront distribution}
     \label{fig:tokyo_relative}
 \end{figure*}
 \begin{figure*}[h]
@@ -199,6 +208,9 @@ From Ireland EC2, network latencies to all three download distributions kept flu
 
 \section{Analysis}
 Network latencies should not change because of file propagation since the request goes always to the same host and responses directly regardless of cached files. So what then causes the changes in the network latencies? One reason is that the level of congestion between hosts simply varies. This is, however, not enough to explain the huge changes in case of Ireland, for example. How could the latency always increase to nearly exactly the same level? We were not able to answer to this question. Another open question is that why is the network latency from California EC2 to California cloudfront distribution constantly higher than to Ireland and Tokyo?
+
+
+
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -285,7 +297,7 @@ Network latencies should not change because of file propagation since the reques
 
 
 \section{Conclusion}
-asdasdadsasd
+
 
 % conference papers do not normally have an appendix
 
