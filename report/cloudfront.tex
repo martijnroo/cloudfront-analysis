@@ -117,7 +117,7 @@ To capture how files of different sizes propagate through Amazon's CloudFront CD
 
 Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. We used a CRON job to execute a bash script every hour at each of the four measurement locations. This bash script pings all the CloudFront distributions and retrieves the different files from all distributions while making a tshark log. Aggregating all the measurements resulted in the following file structure:\\
 
-%TODO: should directory structure be here at all ??
+%TODO: should directory structure be here at all ?? At least it helps the reader to get an image about the combinations and measurements :)
 \dirtree{%
 .1 d2dx94olpiqj0t.CloudFront.net.
 .2 california.
@@ -183,7 +183,7 @@ The network latencies from the home laptop (Finland) to Ireland and Tokyo increa
 
 From Singapore, the network latencies kept quite randomly fluctuating between the initial value and the double of it.
 
-From Ireland EC2, network latencies to all three download distributions kept fluctuating from ~1.5 milliseconds to ~85 milliseconds, back and forth. The relative latencies from Ireland to Ireland and Tokyo were so huge that they were left out from the figure to make other latencies differentiate better.\\
+From Ireland EC2, network latencies to all three download distributions kept fluctuating from about 1.5 milliseconds to 85 milliseconds, back and forth. The relative latencies from Ireland to Ireland and Tokyo were so huge that they were left out from the figure to make other latencies differentiate better.\\
 
 \subsection{Retrieval latency}
 Figures \ref{fig:california_relative}, \ref{fig:ireland_relative} and \ref{fig:tokyo_relative} show the retrieval latencies measured for the different file sizes from the four measurement locations to the California, Ireland and Tokyo CloudFront distributions respectively. The figures show the retrieval latency over a twenty-hour timespan. Since we are mostly interested in the relative change of the retrieval latency over time, the latency is depicted as a percentage of the initial measurement per file and measurement location. Due to space limitations, the retrieval latencies for the six other CloudFront distributions are not shown here. They are however similar to the shown graphs. %TODO: state where the missing data can be retrieved from??
@@ -236,7 +236,7 @@ Our measurement data often shows a direct correlation between the fluctuations i
 
 
 \section{Conclusion}
-Our goal was to examine the file propagation in Amazon CloudFront. However, with our measurements, we really cannot say much about it. We were not able to see significant decreases in retrieval times. Instead, we observed correlation between network latencies and retrieval latencies, for example. Moreover, we spotted interesting differences between EC2 instances. It was expected that retrieval times from the home laptop differ from the corresponding ones of EC2s but what we did not expect was the differences in latency profiles of EC2 machines. Ireland's zigzag patterns, for example, were quite unexpected.
+Our goal was to examine the file propagation in Amazon CloudFront. However, with our measurements, we really cannot say much about it. We were not able to see significant decreases in retrieval times. Instead, we observed correlation between network latencies and retrieval latencies, for example. Moreover, we spotted interesting differences between EC2 instances. It was expected that retrieval times from the home laptop differ from the corresponding ones of EC2s but what we did not expect were the differences between latency profiles of EC2 machines. Ireland's zigzag patterns, for example, were quite unexpected.
 
 For future work, it would be interesting to research more the patterns and fluctuations of latencies, measure latencies with much larger files or measure download speeds with and without use of CloudFront from different locations.
 
