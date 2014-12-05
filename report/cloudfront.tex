@@ -103,19 +103,21 @@ Email: martijn.roo@aalto.fi}}
 
 
 \section{Introduction}
-Amazon CloudFront is service that provides a content delivery network (CDN). A CDN is a geographically wide network of computer nodes that makes it possible to distribute content to end users with low latency and high data transfer speeds. As of November 2014, Amazon CloudFront has edge locations in all continents except Africa and Antarctica. Most of them reside in USA, Europe and Asia \cite{CloudFront_product_details}.
+Amazon CloudFront is a content delivery network (CDN) service. A CDN is a geographically wide network of computer nodes that makes it possible to distribute content to end users with low latency and high data transfer speeds. As of November 2014, Amazon CloudFront has a total of 53 edge locations in all continents except Africa and Antarctica. Most of them reside in USA, Europe and Asia \cite{CloudFront_product_details}.
 
-This research aims to achieve a better understanding of how files propagate within Amazon CloudFront after a CloudFront distribution is created.  Multiple files of different sizes are made available through Amazon CloudFront and for these files the network latency and retrieval latency were measured from different, geographically spread-out locations at multiple times after initiating the CloudFront distribution. Here, the retrieval latency is the time from the first HTTP GET request until the first response packet that contains data.
+This research aims to achieve a better understanding of how files propagate within Amazon CloudFront after a CloudFront distribution is created.  Multiple files of different sizes are made available through Amazon CloudFront and for these files the network latency and retrieval latency were measured from four different, geographically spread-out locations at multiple times after initiating the CloudFront distribution. Here, the retrieval latency is the time from the first HTTP GET request until the first response packet that contains data.
 
 
 \section{Experiment setup}
-To setup the required cloud services, Amazon S3 buckets were created for each available location: US East, US West (Oregon), US West (California), Ireland, Frankfurt, Singapore, Sydney, Tokyo, and Sao Paulo. The S3 buckets functioned as storages for the files to be downloaded via CloudFront. Then, for each of those buckets, we created a CloudFront download distribution. Thus, all CDN download distributions had their own S3 origin in the same region. All download distributions were set to use only HTTP and to be available at all edge locations. Finally, five different-sized files were uploaded to each S3 bucket. The sizes were 1KB, 10KB, 100KB, 1MB, and 10MB. These files were made using rdfc, a Windows utility to make random binary data files of specific sizes.
+To setup the required cloud services, Amazon S3 buckets were created for each of the nine supported locations: US East, US West (Oregon), US West (California), Ireland, Frankfurt, Singapore, Sydney, Tokyo, and Sao Paulo. The S3 buckets function as storages for the files to be distributed and downloaded with CloudFront. For each of those buckets, we created a CloudFront download distribution in that region. Thus, all CDN download distributions had their own S3 origin in the same region. All download distributions were set to use only HTTP and to be available at all supported edge locations. Finally, five files of different sizes were uploaded to the S3 buckets. The files had sizes of 1KB, 10KB, 100KB, 1MB, and 10MB and they were made using rdfc, a Windows utility to make random binary data files of specific sizes.
 
 
 \section{Measurements}
 To capture how files of different sizes propagate through Amazon's CloudFront CDN network, we measured the network latency to the different CloudFront servers as well as the retrieval latency for each of the files at intervals of one hour starting after initializing the CloudFront distributions and continuing for approximately twenty measurements. These measurements were made from a home computer (located in Helsinki, Finland) and from Amazon EC2 instances in California, Ireland and Singapore.
 
-Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. We used a CRON job to execute a bash script every hour at each of the four measurement locations. This bash script pings all the CloudFront distributions and retrieves the different files from all distributions while making a tshark log. Aggregating all the measurements resulted in the following file structure:\\
+Since we have 9 different CloudFront distributions, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations to take into account. We used a CRON job to execute a bash script every hour at each of the four measurement locations. This bash script pings all the CloudFront distributions and retrieves the different files from all distributions while making a tshark log. The CRON jobs at the different measurements were set up with a small offset (some minutes) from each other in order to not influence each other.
+
+Aggregating all the measurements resulted in the below file structure. The CloudFront distributions are the top-level directories and they contain directories for the four measurement locations. As mentioned before, pings are done to the general CloudFront URL and therefore the ping logs are stored in the measurement location directory. The tshark logs for the five different files are stored each in their own directory for each measurement location. \\
 
 %TODO: should directory structure be here at all ?? At least it helps the reader to get an image about the combinations and measurements :)
 \dirtree{%
@@ -144,7 +146,7 @@ Since we had 9 different S3 locations, 5 different file sizes, about 20 differen
 .1 ....
 }
 
-Another bash script extracts information from the raw logs created during measurements. This resulted in a CSV file containing columns shown in Table \ref{table:extracteddata}. The IP addresses are taken from the first HTTP response packet in the tshark logs of the 10mb file download. The network latencies are averages of pinging. Retrieval latencies are the durations between the first HTTP GET request and the first HTTP response packet in the tshark logs.
+A second bash script extracts information from the raw logs created during measurements. This resulted in a CSV file containing columns shown in Table \ref{table:extracteddata}. The IP addresses are taken from the first HTTP response packet in the tshark logs of the 10mb file download. The network latencies are averages of pinging ten times to the main CloudFront URL (which is the same for the different files in one distribution). The retrieval latency are the durations between the first HTTP GET request and the first HTTP response packet in the tshark logs.
 
 \begin{table*}
 \renewcommand{\arraystretch}{1.3}
@@ -166,7 +168,7 @@ home & 1 & 16.11-15.00 & oregon & 54.230.98.223 & 41 & .035771 & .035264 & .0299
 
 
 \section{Results}
-In this section the measurement results are presented. Firstly, the network latency is discussed, followed by the retrieval latency outcomes.
+In this section the measurement results are presented. Firstly, the network latency is discussed, followed by the retrieval latency.
 
 \subsection{Network latency}
 
@@ -177,13 +179,13 @@ In this section the measurement results are presented. Firstly, the network late
     \label{fig:ping_relative}
 \end{figure*}
 
-Relative changes in network latencies are visualized in \autoref{fig:ping_relative}. For every measurement location, three download distribution from different continents were used: California, Ireland, and Tokyo. The network latencies measured from California decreased 70\% after the first measurement on average. Then they stayed quite constant. Network latency from California EC2 to California download distribution, however, kept being about 30\% more than latency to outside California after the first measurement, which is quite interesting.
+Relative changes in network latencies are visualized in \autoref{fig:ping_relative}. For every measurement location, three download distribution from different continents were used: California, Ireland, and Tokyo. The network latencies measured from California decreased 70\% after the first measurement on average. Then they stayed quite constant. Network latency from California EC2 to California download distribution, however, kept being about 30\% more than latency to outside California after the first measurement.
 
 The network latencies from the home laptop (Finland) to Ireland and Tokyo increased by 28\% on average. From home to California, however, latencies increased about 250\%, dropping back momentarily now and then.
 
-From Singapore, the network latencies kept quite randomly fluctuating between the initial value and the double of it.
+From Singapore, the network latencies to California, Ireland and Tokyo kept fluctuating between the initial value and the double of it without a clear trend.
 
-From Ireland EC2, network latencies to all three download distributions kept fluctuating from about 1.5 milliseconds to 85 milliseconds, back and forth. The relative latencies from Ireland to Ireland and Tokyo were so huge that they were left out from the figure to make other latencies differentiate better.\\
+From Ireland, network latencies to all three download distributions kept fluctuating from about 1.5 milliseconds to 85 milliseconds, back and forth. The relative latencies from Ireland to Ireland and Tokyo were so large (around a factor 800) that they were left out from the figure as not to distort the depiction of the other graphs.
 
 \subsection{Retrieval latency}
 Figures \ref{fig:california_relative}, \ref{fig:ireland_relative} and \ref{fig:tokyo_relative} show the retrieval latencies measured for the different file sizes from the four measurement locations to the California, Ireland and Tokyo CloudFront distributions respectively. The figures show the retrieval latency over a twenty-hour timespan. Since we are mostly interested in the relative change of the retrieval latency over time, the latency is depicted as a percentage of the initial measurement per file and measurement location. Due to space limitations, the retrieval latencies for the six other CloudFront distributions are not shown here. They are however similar to the shown graphs. %TODO: state where the missing data can be retrieved from??
@@ -221,7 +223,9 @@ A last observation is that the graphs in all three figures do not show a trend f
 Below, an analysis of the network latency results is presented, followed by an analysis of the retrieval latency results. Lastly, the relation between network latency and retrieval latency is discussed.
 
 \subsection{Network latency}
-Network latencies should not change because of file propagation since the request goes always to the same host and responses directly regardless of cached files. So what then causes the changes in the network latencies? One reason is that the level of congestion between hosts simply varies. This is, however, not enough to explain the huge changes in case of Ireland, for example. How could the latency always increase to nearly exactly the same level? We were not able to answer to this question. Another open question is that why is the network latency from California EC2 to California CloudFront distribution constantly higher than to Ireland and Tokyo?
+The ping requests used to measure the network latencies were always sent to the main CloudFront distribution URL for each distribution. Since the responding host is not always the same for different measurements, we expect that Amazon's DNS servers resolve the main distribution URLs differently every time. This might be due to propagation through CloudFront or it could have to do with load balancing. 
+
+Network latencies should not change because of file propagation since the request goes always to the same host and responses directly regardless of cached files. So what then causes the changes in the network latencies? One reason is that the level of congestion between hosts simply varies. This is, however, not enough to explain the huge changes in case of Ireland, for example. How could the latency always increase to nearly exactly the same level? We were not able to answer to this question.
 
 \subsection{Retrieval latency}
 It takes time for files to propagate through the Amazon CloudFront CDN network to all edge-location servers. We would therefore expect the retrieval latency to decrease with time as CDN servers nearer to the requesting node become populated with the requested files. However, as seen in the results section, this does not show in our measurements. Our measurements show continuous fluctuations of the retrieval latency during the twenty-hour measurement interval.
