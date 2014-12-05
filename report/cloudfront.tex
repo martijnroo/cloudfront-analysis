@@ -119,7 +119,6 @@ Since we have 9 different CloudFront distributions, 5 different file sizes, abou
 
 Aggregating all the measurements resulted in the below file structure. The CloudFront distributions are the top-level directories and they contain directories for the four measurement locations. As mentioned before, pings are done to the general CloudFront URL and therefore the ping logs are stored in the measurement location directory. The tshark logs for the five different files are stored each in their own directory for each measurement location. \\
 
-%TODO: should directory structure be here at all ?? At least it helps the reader to get an image about the combinations and measurements :)
 \dirtree{%
 .1 d2dx94olpiqj0t.CloudFront.net.
 .2 california.
@@ -174,7 +173,7 @@ In this section the measurement results are presented. Firstly, the network late
 
 \begin{figure*}[h]
     \centering
-    \includegraphics[width=\linewidth]{images/pings_relative.png}
+    \includegraphics[width=6in]{images/pings_relative.png}
     \caption[]{Relative changes in network latencies}
     \label{fig:ping_relative}
 \end{figure*}
@@ -188,7 +187,7 @@ From Singapore, the network latencies to California, Ireland and Tokyo kept fluc
 From Ireland, network latencies to all three download distributions kept fluctuating from about 1.5 milliseconds to 85 milliseconds, back and forth. The relative latencies from Ireland to Ireland and Tokyo were so large (around a factor eighty) that they were left out from the figure as not to distort the depiction of the other graphs.
 
 \subsection{Retrieval latency}
-Figures \ref{fig:california_relative}, \ref{fig:ireland_relative} and \ref{fig:tokyo_relative} show the retrieval latencies measured for the different file sizes from the four measurement locations to the California, Ireland and Tokyo CloudFront distributions respectively. The figures show the retrieval latency over a twenty-hour timespan. Since we are mostly interested in the relative change of the retrieval latency over time, the latency is depicted as a percentage of the initial measurement per file and measurement location. Due to space limitations, the retrieval latencies for the six other CloudFront distributions are not shown here. They are however similar to the shown graphs. %TODO: state where the missing data can be retrieved from??
+Figures \ref{fig:california_relative}, \ref{fig:ireland_relative} and \ref{fig:tokyo_relative} show the retrieval latencies measured for the different file sizes from the four measurement locations to the California, Ireland and Tokyo CloudFront distributions respectively. The figures show the retrieval latency over a twenty-hour timespan. Since we are mostly interested in the relative change of the retrieval latency over time, the latency is depicted as a percentage of the initial measurement per file and measurement location. Due to space limitations, the retrieval latencies for the six other CloudFront distributions are not shown here. They are however similar to the shown graphs and can be retrieved from the authors.
 
 The figures show that the retrieval latency for different files with the same source and destination often show the same trend. The biggest exceptions to this observation are the retrieval latency for the 10 MB file from California to Singapore and for the 1 MB file retrieved from Ireland or Tokyo to Singapore, since those values are continuously significantly higher than that for other files retrieved in Singapore from those destinations.
 
@@ -199,21 +198,21 @@ A last observation is that the graphs in all three figures do not show a trend f
 
 \begin{figure*}[]
     \centering
-    \includegraphics[width=\linewidth]{images/california_relative.png}
+    \includegraphics[width=6in]{images/california_relative.png}
     \caption[]{Relative retrieval times using the California CloudFront distribution}
     \label{fig:california_relative}
 \end{figure*}
 
 \begin{figure*}[]
     \centering
-    \includegraphics[width=\linewidth]{images/ireland_relative.png}
+    \includegraphics[width=6in]{images/ireland_relative.png}
     \caption[]{Relative retrieval times using the Ireland CloudFront distribution}
     \label{fig:ireland_relative}
 \end{figure*}
 
 \begin{figure*}[]
     \centering
-    \includegraphics[width=\linewidth]{images/tokyo_relative.png}
+    \includegraphics[width=6in]{images/tokyo_relative.png}
     \caption[]{Relative retrieval times using the Tokyo CloudFront distribution}
     \label{fig:tokyo_relative}
 \end{figure*}
