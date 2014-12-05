@@ -79,7 +79,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{File Propagation Through Amazon CloudFront}
+\title{File Retrieval Latency in Amazon CloudFront}
 
 
 % author names and affiliations
@@ -102,21 +102,22 @@ Email: martijn.roo@aalto.fi}}
 \IEEEpeerreviewmaketitle
 
 
-
 \section{Introduction}
 Amazon CloudFront is service that provides a content delivery network (CDN). A CDN is a geographically wide network of computer nodes that makes it possible to distribute content to end users with low latency and high data transfer speeds. As of November 2014, Amazon CloudFront has edge locations in all continents except Africa and Antarctica. Most of them reside in USA, Europe and Asia \cite{CloudFront_product_details}.
 
 This research aims to achieve a better understanding of how files propagate within Amazon CloudFront after a CloudFront distribution is created.  Multiple files of different sizes are made available through Amazon CloudFront and for these files the network latency and retrieval latency were measured from different, geographically spread-out locations at multiple times after initiating the CloudFront distribution. Here, the retrieval latency is the time from the first HTTP GET request until the first response packet that contains data.
 
+
 \section{Experiment setup}
 To setup the required cloud services, Amazon S3 buckets were created for each available location: US East, US West (Oregon), US West (California), Ireland, Frankfurt, Singapore, Sydney, Tokyo, and Sao Paulo. The S3 buckets functioned as storages for the files to be downloaded via CloudFront. Then, for each of those buckets, we created a CloudFront download distribution. Thus, all CDN download distributions had their own S3 origin in the same region. All download distributions were set to use only HTTP and to be available at all edge locations. Finally, five different-sized files were uploaded to each S3 bucket. The sizes were 1KB, 10KB, 100KB, 1MB, and 10MB. These files were made using rdfc, a Windows utility to make random binary data files of specific sizes.
+
 
 \section{Measurements}
 To capture how files of different sizes propagate through Amazon's CloudFront CDN network, we measured the network latency to the different CloudFront servers as well as the retrieval latency for each of the files at intervals of one hour starting after initializing the CloudFront distributions and continuing for approximately twenty measurements. These measurements were made from a home computer (located in Helsinki, Finland) and from Amazon EC2 instances in California, Ireland and Singapore.
 
-
 Since we had 9 different S3 locations, 5 different file sizes, about 20 different measurement times, and 4 different measuring locations, there were numerous combinations. We used a CRON job to execute a bash script every hour at each of the four measurement locations. This bash script pings all the CloudFront distributions and retrieves the different files from all distributions while making a tshark log. Aggregating all the measurements resulted in the following file structure:\\
 
+%TODO: should directory structure be here at all ??
 \dirtree{%
 .1 d2dx94olpiqj0t.CloudFront.net.
 .2 california.
@@ -163,7 +164,9 @@ home & 1 & 16.11-15.00 & oregon & 54.230.98.223 & 41 & .035771 & .035264 & .0299
 \label{table:extracteddata}
 \end{table*}
 
+
 \section{Results}
+In this section the measurement results are presented. Firstly, the network latency is discussed, followed by the retrieval latency outcomes.
 
 \subsection{Network latency}
 
@@ -192,15 +195,12 @@ Another observation is that Ireland's values seem to be either around 100\% or c
 A last observation is that the graphs in all three figures do not show a trend for the latency either going down or up and the measurements also do not seem to fluctuate less over time.
 
 
-
-
 \begin{figure*}[]
     \centering
     \includegraphics[width=\linewidth]{images/california_relative.png}
     \caption[]{Relative retrieval times using the California CloudFront distribution}
     \label{fig:california_relative}
 \end{figure*}
-
 
 \begin{figure*}[]
     \centering
@@ -218,12 +218,10 @@ A last observation is that the graphs in all three figures do not show a trend f
 
 
 \section{Analysis}
+Below, an analysis of the network latency results is presented, followed by an analysis of the retrieval latency results. Lastly, the relation between network latency and retrieval latency is discussed.
 
 \subsection{Network latency}
 Network latencies should not change because of file propagation since the request goes always to the same host and responses directly regardless of cached files. So what then causes the changes in the network latencies? One reason is that the level of congestion between hosts simply varies. This is, however, not enough to explain the huge changes in case of Ireland, for example. How could the latency always increase to nearly exactly the same level? We were not able to answer to this question. Another open question is that why is the network latency from California EC2 to California CloudFront distribution constantly higher than to Ireland and Tokyo?
-
-
-
 
 \subsection{Retrieval latency}
 It takes time for files to propagate through the Amazon CloudFront CDN network to all edge-location servers. We would therefore expect the retrieval latency to decrease with time as CDN servers nearer to the requesting node become populated with the requested files. However, as seen in the results section, this does not show in our measurements. Our measurements show continuous fluctuations of the retrieval latency during the twenty-hour measurement interval.
@@ -237,131 +235,13 @@ The retrieval latency is the time between sending the first GET request and rece
 Our measurement data often shows a direct correlation between the fluctuations in network latency and the fluctuations in retrieval latency. The retrieval time from Ireland to the California distribution shows a very similar pattern to the network latency in that same path. The same holds for latencies measured from California and Singapore to the Ireland, Tokyo and California distributions and for those measured from Home to Ireland and Tokyo. The most notable exception to this general rule is between Home and the California distribution since fluctuations of up to a factor four seem to have no noticeable impact on the retrieval time. The network latency is shown in proportion to the initial measurement, which means that a factor four increase can be rather small in absolute terms and this is the case for the Home-California connection.
 
 
-
-
-
-% An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex,
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation Results}
-%\label{fig_sim}
-%\end{figure}
-
-% Note that IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command, the
-% \label for the overall figure must come after \caption.
-% \hfil must be used as a separator to get equal spacing.
-% The subfigure.sty package works much the same way, except \subfigure is
-% used instead of \subfloat.
-%
-%\begin{figure*}[!t]
-%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
-%\label{fig_second_case}}}
-%\caption{Simulation results}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-
-
-% An example of a floating table. Note that, for IEEE style tables, the
-% \caption command should come BEFORE the table. Table text will default to
-% \footnotesize as IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
-
-% Note that IEEE does not put floats in the very first column - or typically
-% anywhere on the first page for that matter. Also, in-text middle ("here")
-% positioning is not used. Most IEEE journals/conferences use top floats
-% exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
-% footnotes above bottom floats. This can be corrected via the \fnbelowfloat
-% command of the stfloats package.
-
-
-
 \section{Conclusion}
 Our goal was to examine the file propagation in Amazon CloudFront. However, with our measurements, we really cannot say much about it. We were not able to see significant decreases in retrieval times. Instead, we observed correlation between network latencies and retrieval latencies, for example. Moreover, we spotted interesting differences between EC2 instances. It was expected that retrieval times from the home laptop differ from the corresponding ones of EC2s but what we did not expect was the differences in latency profiles of EC2 machines. Ireland's zigzag patterns, for example, were quite unexpected.
 
 For future work, it would be interesting to research more the patterns and fluctuations of latencies, measure latencies with much larger files or measure download speeds with and without use of CloudFront from different locations.
 
+
 % conference papers do not normally have an appendix
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
-% The IEEEtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
-% \begin{thebibliography}{1}
-
-% \bibitem{IEEEhowto:kopka}
-% H.~Kopka and P.~W. Daly, \emph{Blah blah blah \LaTeX}, 3rd~ed.\hskip 1em plus
-%   0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-% \end{thebibliography}
-
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
